@@ -1,0 +1,1445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- saved from url=(0081)https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem/F -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="X-Csrf-Token" content="2be9df09fa0197ec7fe717fe765ea72a">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01">
+
+
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery-1.8.3.js.Без названия"></script>
+    <script type="application/javascript">
+        window.standaloneContest = true;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+
+        /* Protection against trailing dot in domain. */
+        let hostLength = window.location.host.length;
+        if (hostLength > 1 && window.location.host[hostLength - 1] === '.') {
+            window.location = window.location.protocol + "//" + window.location.host.substring(0, hostLength - 1);
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="j3">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90">
+    <meta property="fb:admins" content="100001352546622">
+    <meta property="og:image" content="/static/images/codeforces-telegram-square.png">
+    <link rel="image_src" href="https://route256.contest.codeforces.com/static/images/codeforces-telegram-square.png">
+    <meta property="og:title" content="Задача - F - Codeforces">
+    <meta property="og:description" content="">
+    
+    <meta property="og:site_name" content="Codeforces">
+    <meta name="uc" content="140fc811b8b89af693dcdf5803ff9162bcf9bf63">
+    <meta name="usmc" content="ba31e6703648ef70cf27f51c2dd130a7e9f03bbb">
+    
+    <meta name="cc" content="8e1d8299412e02b1bfa7a1edf25834c7fc7e8188">
+    <meta name="pc" content="f0f50d3db3020091723c95c33b3aaf6ee6ca4bc1">
+    
+    <meta name="utc_offset" content="+03:00">
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2">
+    <title>Задача - F - Codeforces</title>
+        <meta name="description" content="Codeforces. Соревнования и олимпиады по информатике и программированию, сообщество программистов">
+        <meta name="keywords" content="программирование информатика контест олимпиада алгоритмы c++ java графы vkcup">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/font-awesome.min.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/line-awesome.min.css" type="text/css" charset="utf-8">
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://route256.contest.codeforces.com/static/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://route256.contest.codeforces.com/static/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://route256.contest.codeforces.com/static/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://route256.contest.codeforces.com/static/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://route256.contest.codeforces.com/static/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://route256.contest.codeforces.com/static/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://route256.contest.codeforces.com/static/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://route256.contest.codeforces.com/static/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://route256.contest.codeforces.com/static/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://route256.contest.codeforces.com/static/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://route256.contest.codeforces.com/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://route256.contest.codeforces.com/static/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://route256.contest.codeforces.com/static/favicon-16x16.png">
+    <link rel="manifest" href="https://route256.contest.codeforces.com/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/prettify.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/clear.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/style.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/ttypography.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/problem-statement.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/second-level-menu.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/roundbox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/datatable.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/table-form.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/topic.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/jquery.jgrowl.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/facebox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/jquery.wysiwyg.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/jquery.autocomplete.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/codeforces.datepick.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/colorbox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/jquery.drafts.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Задача - F - Codeforces_files/community.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Задача - F - Codeforces_files/groups.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Задача - F - Codeforces_files/sidebar-menu.css" type="text/css" charset="utf-8">
+
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+    });
+    MathJax.Hub.Register.StartupHook("End", function () {
+        Codeforces.runMathJaxListeners();
+    });
+    </script>
+    <script type="text/javascript" async="" src="./Задача - F - Codeforces_files/MathJax.js.Без названия">
+    </script>
+    <!-- /MathJax -->
+
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/prettify.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/moment-with-locales.min.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/pushstream.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.easing.min.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.lavalamp.min.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.jgrowl.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.swipe.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.hotkeys.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/facebox.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.wysiwyg.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/wysiwyg.colorpicker.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/wysiwyg.table.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/wysiwyg.image.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/wysiwyg.link.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.autocomplete.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/ua-parser.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.datepick.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.ie6blocker.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.colorbox-min.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.ba-bbq.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.drafts.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/clipboard.min.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/autosize.min.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/sjcl.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/codeforces-options.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/codeforces.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/EventCatcher.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/preparedVerdictFormats-ru.js.Без названия"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/style(1).css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Задача - F - Codeforces_files/style(2).css" type="text/css" charset="utf-8">
+
+
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/jquery.markitup.js.Без названия"></script>
+    <script type="text/javascript" src="./Задача - F - Codeforces_files/set.js.Без названия"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+        <script id="nocomb.ace-builds/ace.js" src="./Задача - F - Codeforces_files/ace.js.Без названия" type="text/javascript"></script><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style>
+        <script id="nocomb.ace-builds/ext-language_tools.js" src="./Задача - F - Codeforces_files/ext-language_tools.js.Без названия" type="text/javascript"></script><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style>
+        <script id="nocomb.ace-builds/ext-modelist.js" src="./Задача - F - Codeforces_files/ext-modelist.js.Без названия" type="text/javascript"></script>
+
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none; box-sizing: content-box}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.MathJax_test.mjx-test-display {display: table!important}
+.MathJax_test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.MathJax_test.mjx-test-default {display: block!important; clear: both}
+.MathJax_ex_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.MathJax_em_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60em}
+.mjx-test-inline .MathJax_left_box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .MathJax_right_box {display: inline-block; width: 0; float: right}
+.mjx-test-display .MathJax_right_box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.9') format('woff'), url('https://route256.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.9') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class=" "><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div><span style="display:none;" class="csrf-token" data-csrf="2be9df09fa0197ec7fe717fe765ea72a">&nbsp;</span>
+
+<!-- .notificationTextCleaner used in Codeforces.showAnnouncements() -->
+<div class="notificationTextCleaner" style="font-size: 0"></div>
+<div class="button-up" style="opacity: 0.7; width: 50px; height: 100%; position: fixed; left: 0px; top: 0px; cursor: pointer; text-align: center; line-height: 35px; color: rgb(211, 219, 228); font-weight: bold; font-size: 3rem; display: none;"><i class="icon-circle-arrow-up"></i></div>
+<div class="verdictPrototypeDiv" style="display: none;"></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        var hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+    };
+
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile === "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 700
+        });
+    }, 100);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+        var count = 0;
+
+        function getDelay() {
+            var delay = 0;
+            var last = Codeforces.getFromStorage("LastOnlineTimeUpdaterMillis", 0);
+            if (last && last != null) {
+                var period = count < 20 ? 360 * 1000 : 600 * 1000;
+                delay = period - (new Date().getTime() - last);
+                if (delay < 0)
+                    delay = 0;
+            }
+            return delay;
+        }
+
+        window.setInterval(function () {
+            if (getDelay() <= 0 && count < 120) {
+                ++count;
+                Codeforces.ping("/data/update-online");
+            }
+        }, 5000);
+
+        var handle = "g15721=brown_frog_d932";
+        $("a.rated-user:contains(" + handle + "), span.participant:contains(" + handle + ")").each(function () {
+            if ($(this).text() == handle) {
+                var td = $(this).parent();
+                var tr = $(this).parent().parent();
+                if (td.is("td") && tr.is("tr") && !tr.hasClass("disable-highlight-self")) {
+                    info(handle);
+                    tr.addClass("highlighted-row");
+                }
+            }
+        });
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "ru");
+        }, Math.random() * 500);
+    }
+
+    function showEventCatcherUserMessage(json) {
+        if (json.t == "s") {
+            var points = json.d[5];
+            var passedTestCount = json.d[7];
+            var judgedTestCount = json.d[8];
+            var verdict = preparedVerdictFormats[json.d[12]];
+            var verdictPrototypeDiv = $(".verdictPrototypeDiv");
+            verdictPrototypeDiv.html(verdict);
+            if (judgedTestCount != null && judgedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-judged").text(judgedTestCount);
+            }
+            if (passedTestCount != null && passedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-passed").text(passedTestCount);
+            }
+            if (points != null && points != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-points").text(points);
+            }
+            Codeforces.showMessage(verdictPrototypeDiv.text());
+        }
+    }
+
+    $(".clickable-title").each(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            var tmp = document.createElement("DIV");
+            tmp.innerHTML = title;
+            $(this).attr("title", tmp.textContent || tmp.innerText || "");
+        }
+    });
+
+    $(".clickable-title").click(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            Codeforces.alert(title);
+        } else {
+            Codeforces.alert($(this).attr("title"));
+        }
+    }).css("position", "relative").css("bottom", "3px");
+
+        Codeforces.showDelayedMessage();
+
+    Codeforces.reformatTimes();
+
+    //Codeforces.initializePubSub();
+    if (window.codeforcesOptions.subscribeServerUrl) {
+        window.eventCatcher = new EventCatcher(
+            window.codeforcesOptions.subscribeServerUrl,
+            [
+                Codeforces.getGlobalChannel(),
+                Codeforces.getUserChannel(),
+                Codeforces.getUserShowMessageChannel(),
+                Codeforces.getContestChannel(),
+                Codeforces.getParticipantChannel(),
+                Codeforces.getTalkChannel()
+            ]
+        );
+
+        if (Codeforces.getParticipantChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getParticipantChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getContestChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getContestChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getGlobalChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getGlobalChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserShowMessageChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserShowMessageChannel(), function(json) {
+                showEventCatcherUserMessage(json);
+            });
+        }
+    }
+
+    Codeforces.setupContestTimes("/group/OcTypf5d5d/data/contests");
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+
+
+<div id="body">
+            <script type="application/javascript">
+                window.setTimeout(function () {
+                    var url = location.href;
+                    var hashCode32 = Math.abs(url.hashCode()).toString();
+                    var hashCode = "p" + hashCode32 + Math.abs((hashCode32 + url).hashCode());
+                    var pvs = Codeforces.getFromStorage("pvs" + hashCode);
+                    if (!pvs) {
+                        $.post("/data/apv", {
+                            ftaa: window._ftaa,
+                            bfaa: window._bfaa,
+                            url: url
+                        }, function (json) {
+                            if (json["success"] === "true") {
+                                Codeforces.putToStorage("pvs" + hashCode, true);
+                            }
+                        }, "json");
+                    }
+                }, 5000);
+            </script>
+        
+
+<div id="header" style="position: relative;">
+    <div style="float:left; height: 60px;">
+            <div style="bottom: 4.0px;"><img src="./Задача - F - Codeforces_files/top3.png" style="max-width: 100.0%;max-height: 100.0%;"></div>
+    </div>
+    <div class="lang-chooser">
+
+        <div style="margin-top: 0.5em;">
+                        brown_frog_d932
+                     | 
+                        <a href="https://route256.contest.codeforces.com/0151e1911573585cfeb5a0c2de4a0be4/logout">Выйти</a>
+                    
+        </div>
+
+
+
+    </div>
+    <br style="clear: both;">
+</div>
+        
+
+    <div class="roundbox menu-box" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+    <div class="menu-list-container">
+    <ul class="menu-list main-menu-list">
+                <li class=""><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contests">Соревнования</a></li>
+    </ul>
+    <br style="clear: both;">
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input.search").focus(function () {
+                if ($(this).attr("data-isPlaceholder") === "true") {
+                    $(this).val("");
+                    $(this).removeAttr("data-isPlaceholder");
+                }
+            });
+        });
+    </script>
+            <br style="height: 3em; clear: both;">
+
+        <div style="position: relative;">
+                        <div id="sidebar">
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <table class="rtable ">
+            <tbody>
+                <tr>
+                            <th class="left" style="width:100%;"><a style="color: black" href="https://route256.contest.codeforces.com/group/OcTypf5d5d">Route 256</a></th>
+                </tr>
+                    <tr>
+                                <td class="left bottom" colspan="1"><span class="contest-state-regular countdown" cdid="i1">Участник</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">→ О группе
+            <div class="top-links">
+            </div>
+        </div>
+        <div style="text-align: center; margin: 1em">
+                <img style="max-width: 250px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAB/wklEQVR4Xuy9d5wUx5n/77+NfL7Tne/O9td3vt/5fPZZCQlEzgsCIZHDkjbnnHPOGVhyXHLOOQkhECiAQBISi2TlnCUUkRD7+dXTM7VbU92TdmdmZ2br/Hof2ukw3dVd73nq6arqX/xywAwoegZ3jIrAHWNiFQrrsHuk19B5unvHIwwMZN8dZPM+/YVuI4XfYutGUCgsGB2DO0aGm+Q1cJbuXnIZoqToO+XjkFDC6kHcMSpSdwMoFA4REIU7RoSh17Ag9BoyRxONfH/ZheTEtqV93DEilO0zWv89dlDC6kF05gZRKKxCERGJjKIjFo1pEpKhZXTfORA9OYISVg9CCUvh6yhh9SCUsBS+jhJWD0K++AqFr6GE1YOQL75C4WsoYfUg5IuvUPgaSlg9CPniKxS+hhJWT2FQoO7iKxS+hhJWT0EJS+EHKGH1FJSwFH6AElZPYdBs3cVXKHwNJaweAo3hki++QuFrKGH1EJSwFP6AElYPQQlL4Q8oYfUQeg2Zq7v4CoWvoYTVQ9AmSTO4ARQKX0IJq4eghKXwB5SweghKWAp/4Bc0U6Bb52xWeAW9hofoLr5C4Wv8QvuPgOjue1OGwiMoYSn8AZOwOCNCOze5vMLrUcJS+AOWwiJYtKWaiP6HEpbCH9ALy0yv4cG6m17hu/QaEaa7xgqFr2FVWBoBUSra8hOUsBT+gG1hESoh7xcoYSn8AfvC4rAbXkVbvssdI8L111Sh8DEcFxZBCfnBc3SVQeH9aG/gla+nQuFjOCcsMyoh73soYSn8gU4JS0N1f/AplLAU/kDnhUWMjkGvYUG6yqHwPu4YFam/fgqFj9E1YXFUQt7roYhYd90UCh/DNcIiVPcHr0YJS+EPuE5YHBqPaFBhFN2LEpbCH3C9sAiVkPc6dNdIofBB3CMsM6r7g/cgXxuFwhdxq7A0RkWoaMsL0F0XhcIHcb+wCJWQ714GztRfE4XCB/GMsDha9wc1QaDHGRSovxYKhQ/iWWERKiHveZSwFH6C54VlRiXkPYgSlsJP6DZhaahoyyOo19Qr/IXuFRahxiO6HSUshb/Q/cLiqPGIbkMJS+EveI+wCDVBoFtQwlL4C94lLDMqIe9aeg2ZqytjhcIX8UphaaiEvMvoNTRIX74KhQ/ivcIyo6KtrqOEpfAXvF5YGiPDVbTVBegprK5MFQofxDeERajxiJ1GvaZe4S/4jrA4NEGgGo/oFEpYCn/B94RFqIS8UyhhKfwF3xSWGZWQd4xeLCqVy06h8EV8WlgaAVEq2rJDrxFh+nJTKHwQ3xcWoRLyNlHCUvgL/iEsjhqPaIgSlsJf8C9hEV0cj/jvASEIiC5EaNGCduhv+lxe11dQr6nvOn+Zm6chf95d/G5yKkan1iOsajVSF27W/qW/5fX8Da8W1ur9p3Hjxg27HLtwpX2bv87J0y2XeenVN3SVmoRUuGQj3v3gQ936nJW7juJ/J8VabEd/y+vZQ96HvNwWJFD52IkpadW6dYvY+YjCeum1t3TrWKN49W5tGypb8XOqGOI1kpfz7Yyun7jMCKNrZ2uZDJ2fvE97yPv4yxxLKZEM3v3g4/blJAU6D3k7uVx2nLpgeGxymchceKEVqQs26Y6TQ6IqXrXb4phE6PNV7DtkudJxy+vK+5aRr618jt2BEpZZOvSZvJ4RtF7fOeleJ6xVTKbyuiRfJSzbyPsQhUXnKi+nik/SkIVhcQ/O1R8rLze5TKxB5/K7SakWx0r7dfQa0nqitJSwPICjF7crwqLIylFZcUgEvInoLcKyFhlSc1YJyzryPriwrMmBN7uMoiy+TD5v8bjkZbbYcfJC+3bWjscWovSUsDyAfHHpAvJcggzfxujGpov1l8BM/O+UBE0WojAa1ulvvGPnnm3PXdG/RkLjzS0jYdEyEXm5PWFR05NvK4vISFhGzUEOnR9/TX3jlsNac4E49pTlzcibEpyp+Yu0bezdtPJyTwpLvgfkZpAj6PZpFpZ87FQ+VH58ubUoiz6XxSKWmbxf+pvuT2LHqad0x8OFI2/Hv4/nruhf+XuJ1IWm5qUSlgeQLxJVJHkdGcMbm4f5Bt0fZBltP3ZGJwTi/OWXLNbjUZqRsORt5eX2hEWitHZ8RsLafvSJ9uUkuKNMuOLfXFgi8g1sLTqxd9PKyz0pLHn7ziDvk+4VW006EaMoi/JL4t9yudoqEyMJTstfrH0uf49RXTCSJW99yNebkLeXka+tURl4Gp8SFiUk6QJzKCEq/6oa3dj0yyhul9ywWqvoJAZ5XVEWIg/OTbd4csjF0d3CoqapuJyEm1K3wuIzo6dH8g0sVyyOfNNSZCZGYnIFsSUsWpf2x6HrIh6b0bWztUy8pqb7wXqy2hryPo0iFSM5EEaCkJEruVwmssSNhCVfK0J+OMAZnWKKtjg8Ujbah3gtqPUiH6t87eXl3YFPCcsa9KvGtzG6sWW0ysmijikZtbplsmzs0d3Cor/l5bKISQxy2co3sKPCsoctYVmDXz+ja+f0dTU4B1vI+5ChfVqTA0GVWN7G1vHIZSKWF/0Ay/vgzT3xM5KavF97yNfbGtr5moMA+dorYdlBvri24IXpzI09tWCRbpmz/a26W1hic1Dct5j7MrrB5RvYqHIR8k1rj84Ii6DjMbp2fF9Gy2SsnYMt5H3I9Isq020jYy3KMqrgcpnwqJNaD/L2/Hw8KSyCNyPla290Pp7Gp4TFk+79osp1F5gXstGNLTcJedOhX3SZbl1fahLKzUHx6afczUFuFso3sLXKLt+0crNObsLYEpaWtLZx/YyuHd+X0TJ3NAnpGMW/6Xzl7gUyslD4dvJ6hFwmtuDNOaMfVmtRH5Wto01C/qCiaLU+F0eilq+9EpYd5Isr5hLki8h/dYxubGsXl5ArHCWsZeEYiePClZe0z7sqLKPtxeXy94rCkpuDFFXRE0ZCfkggNwvlG9haBbN308rLbQlLXCZXcvp+o2vH17e1rCvI+6R7RT4nazksjlyWhFxOHLlMjKCyEH9gjJLujVuO6PZtlFPjP+RGxyhuK9cDWl8uB2vn5El8VlgNWy1/CS+8cF373OjGpsK39vibKpG8PsmI54LoX/GpG4ekYE04jgqLOqBSklxcxjt7OiIso+OyhtyMkG9gTwtLXtaZCEu+pvIDGEfQ7ZN9D32XXIFt9T6Xy8BaWRLyeVNXBjEikiNha9sRvPsJbUP5L1lWBL9e8vUm+L6NnooqYXUC+SLRTfTS39/SkAuYy8zoxpYRbyijXyV7kES4dLoiLFlGBBehPWEZfa89xMog38DWKpm9m1ZebktKtq4f7dfo2vF9GS2TsXYOtpD3waNx+YeMjt1IiHI5EnIZichlIpaXLej8nb5PhfIwOk5+LWQ58+3ka2vrvDyFTwnLGlTA7T2UO3FjO3MzUARE+SwuFCNxdFZYtG85vyWvw4UlNwdpPTnHJkdvYrNQvoHlMuHYu2nl5baEZQ3KZ1m7duI1kpfJWDsHW8j7ENMHcp6N/pbzWfL52zsGuUwcFRbhzH0q1glCvt7WIHlRHoy2kc9NvvbdgU8LiwqXClW8MJ29sWk7ambKvzYd32XKD8lCcZWwqHe9KEJ7wpKbg9SjXd5WlprYLJRvYKMyIezdtPJyZ4RFv+6U8OUSMLp24vWRl8lYOwdbyPsQ7yWquPJyMXdk9NBGLh8ZuUycERZB5SDvQ4SusVimHPl6y/C6xGVFyNfW3rl5Aq8WVndBF5cuTvu0HSl1+N3DMTohdBUSF0de5irUa+r9ExKS7j5lf8ui8jeUsJzBBycIVMJS+BNKWM7SxQkCPY0SlsKfUMLqJL7yxh4lLIU/oYTVFXzg/Yi9hqrX1Cus02toMPtRm2t6d+XIcHZPR+rW6VZGR5uOaUQoeg0LUsJyBd4cbSlhKWwyKkJ3z2j3zaBZ6DV4jiaJXsNDTTKjiSBpqiKSiLyfzkL7IyHR/klKTJx0z9L3/3LgTN1xKWG5Clbg3hhtKWEp7EFSku8bR+g1MNAEiU2EIjaSDkH/LS4zb2MkI0dQwnIlVn6tuhO6GXXHqVCIjI5hAgnU3TveiBKWC+k1aLaugLsbLTdhcKwKhQWsOSbfO96IEpaLoJeVyoXbnVBnVJrrPbRsaUenwsn+0amQzoMG/fJOk/Tfjsxb5Q/Qudsa6C2+r5AjjiG1xS+98AdXxuuFJQ8hsIbRFCCOjrsijIZI0EyY8ngyGRq+cEdAlNWQWp79U8bakB+O0Qsm+AswjKDvk4ftiFA5iTe7I0M25G1EjLaXp7LhODK8hmNUyWhWAVvDUuh6y8NH5EHMtnBk0K+8P+36O7CMoP1YWy4vk4cZkYjkc5eX23pfIe1PnJlXxF49oamKkmtX6O617kAJy4wsLPmmtQatJ7/YQsSesDgkLvF9hxx5Ij5CnKhPhMYiyusaQeVi6/VP1pBlQMiViJCnsuF0RVg0xs1aZZQRK6YsEVu4W1hyWTkjLHlbgi9z5hVgRgO4Hd3W2lxxnkQJy4woLHnWSVvQoGW5UEUcFRYhvu+QkGcUFTGaGVWOrGh/q/aeNHx9lK3XP1mDhOHozS4Lh+issJypkBw+f5UsEVu4U1hG5eyosOTJKjl8ubNlI4tU3p7uox3HzugG3hNG950n8SlhUYXh7fIUVuHEZY4Ii6ZYppuKkJeJwpIvEv0q0U1DN538S+essEgi9BlRtMTyHAgx9JZnWxAxahbK69C+KLdmVBa8vIwqEn1GyGVMiOVkrSIRRs1CI2HJE/BxRDHKZU5QpeP5GWuzbNB+KL8lvuVHXofuCb6Mz8TgDmHJ5S8vtyUseVv+9ijtO6XXivHlvGysTewn/iDIy0NLmtvvKXnm2u5uGvqUsMSLKN/8jghLvPHkm5LfAEYVWJxyRHdTOiksuTknv0RCnMDP3vsGxf1QNMZFyKHPSFhG77vjZWF0vmIZNkozu4pvIxZFwqcnEf+Wr4d8zeTvMsJoNkyja208FYxemvI6RpGgfG90VViyjOTlRuvwe10WEn0u3o/yPU5/y1Gw0TxatmQaVrWqvU+hHLVPTa/W3eOeRAnLjC1hifvU3ZRdFJb85mm+P7k5SJPxyW+RthWe0/Ykv1V7T+lkJd70Tp+vcKOL+6XP5ddUyTKQrxnBI14Of2kCxyiKszZHvxyJ8WmzReR9ycdIyPeG+HILW+VhtMxWc9aesKgs5G3Ee9hoPi6j8yHka0PwZfLxUV0KrViuuzfle7c7UMIyw4Ul71dbZiOJ2xVh0ZNBOU/AJ+KTm4N8jnmjdY0wmliQoBeh2puJki8zmj6al7MsEqrUctnJEY683BqaUM1PJeXyFu8BGbnSG0V58ncZVfAdpy5YrCMmquX8pj1hievLT5xtCcsIcX3C6NrJ0ZWtdfl9IF9jI+g+t/Yk25MoYZnhwjJaRtDNRp/L+3RWWLxpR7kB8d2BHB41yaE4v1ks3zdo2SwUsSYsQhSw0Y1M50nnK0dmBL2JmLaToxneD0rcRhaGfM1swa+1LAFbwpKjCPn7Cfl7jIQlfyffl9Fc9LaEJd4r9N+ylJwRFm0vy8jo2snr2FrXGWHRD2uhQd7U0/QoYfHKRshSEoXlzCN0Z4Vli4Z1e7RtZNmIUZmc87LVLKT99AsvNkye84pqdCNbo8EcMcmvnRKviywyUQjyNSN4kt3aMRpVZGuVUv7uzjYJjSJLa9gSlgidh3wutoRF3y/fo/KrvYzK0+h8jPZP8GXyufIfdqoH8jJb95sn8GphyQlX8QLLF8tIWPIFEi+mfDOIwiKMkrhGuEpYXFaE3By09b5B3iykPlh8HQ7lsbTR8GP0L1Sw9ZTQCC4rQr75Se78SRs1OY2+x+iaEWKZy5WDvkeWIyFXXG3fBsl5uUlKyOtYq+B0rLIA6TzlcnREWPwlG3K52RMWHYP8wym/bkxezr/L4lwM8mjid8vLxJaIXAbyW508jdcKiwpNzheI73CTf5HpAvCbj5on8raE+MtsT1jyDUQ0bNynexONs8Ii+chvtxH7XhFyc9AWvFkoR2VEw/rdmrDohpVvbFvC4mXMkSMaOcdjC/peh14yYSAcHhHL14qg46ekNGGth7dRcl5ex5qwRMShMLKUHBEWPw75nrInLPpcvs/pPMVRB0bfyZufdG7WujWIUpKX82VGkaYSlhXkAnYEfgMY3eDizWG0jiws+UJpzbKBgbondc4Ky96TFiPx2MNa3kv7PoP3zhH8pjQSlnwtRIwiHntwKRgJy9q78Qjx1W1Gy21Bb46Rj52Q13NEWCKyIOwJS4wwZSk5IixCvlfFKMpIKvaQWyPy9tbydQR/a1N30WOEJf/ayuuIwpJvHoJfKHcLS24OGr1vUBYTbxbK32UNsTI4Kyy5bPivuYjcs55XECNhWUMWjlE+xRrytiLyuu4UFh2veN/JZeeosIyELTaLabmjZUPfKUfMjm5L96LcGvA0fi8suhhGN6UtYckXUJSMu4VlTUYistTEp4U0WFruKtGxnv6ddc4KSy43+dfaaJ+8WeiIsOiXnZpB8j4Jo7ySCO/hLW8nIm9jdG/YQpaSLWHJUb0sJUeFRchNQ/nYKdKy1uOf4NdePh9Cvt9l2t8f6YZX3TmLTwhLvnjW1uM3AFUOMe/QJWzMxODNUBKe5MWjHrq55V9WX4XOg86Hzou/k098AWhPx21l4wUT/fmlsFyJrZkYfAH5fBSKLtHNE/15rbDEnIg8XKMz63UKiq4MCs1nGBSoPyeFoot053s5vVZY3kB3h79dRglL4Q668d0FSlhW6DXMe1/d5TBKWAo30V2pEiUsI3y9KcgZNFt/bgqFK+imBLwSlgHdcSHcgXpNvcKddMcLhJWwJOgtt3Ih+SpKWAp34+mXBythifhonytrKGEp3I6HE/BKWALdlUh0F/SacPkcFQpX48luDkpYZrztRaiuoNfQIN15KhQuJyDaYy0TJSzCz5qCHCUshafwVAJeCWuM/zUFOUpYCo+hdXNwfwJeCctf+lwZ0Gt4iP58FQp3MTJcdw+6ml9QhdV9cQ/CH5uCHCUshadxdwL+FzR8g78duKfhF8NvbKCEpfA4bm6x/IL/B+VxelS05eaC9QaUsBTdQa9hQbp70VW0C0uDBsuOitAdgD/iz01BTndGzn+sjcVde2Nw73ETf90Sgztn6df570XW+U2Yfr8i/54Yq+1X/A76TF6P9sP3+etJHZ/T8fx5dYyGuD6tIx8/rSMfP2HvHH6f1bEu/be8nKB98HX+PUG/nBC/WzwfI/5QYnmMVCZ0/Pxc6LzkdQg6b3lfxO+z9evaxI3jDC2FZabXMP/+Zfan4Te26A5hUcXqcykGA9805r8XdcjB1nqEUaXiUKWT1+fIAvpDcWz7sjtn64+T/uXrkgxsHZd4/I6cw1+3dKxL/y0vJ8TvJ0HIyzn8u8XzMeLe4x3fSdvIyzn0vaII6b/ldcR1RdnbxU0T/RkKS4OiLX9sIvppnysjukNYYgWmCvofxaYIQvycRxR/Xm2qxGJFvkeLlEyf/VuCfv/adms69kWVk/ZH9D7b8bkoLSNh/XWz6e9+LzMRNJs+EyVGn9Px2Tp+8Xx7n+s4boK252XA1+XnqX2nEMGI++PCEtcRz4siMCoX/j30vXx9/hk/H1FWvJzofP66uaM8KOLi3y0Ki86dvou24Z/RsYjXwR7uSMBbFxYxcKYWjcgH4sv4a58rI+4YEa47f3ciikGshAT9Ot9vrnhUueRfa76draiKw2Vw/zn9MqqAfF/8O2RhiX+L38clRsjNUdqXUUTGP5MrM//cSFji9jJcWOI69N1GArS2Pt+Gn4sYcXH+vKZj+e/MzVZRWGK5cGHK320XN4wztC0sM/6SkPfH4Te28HQ+kjfT5MrDoYrBKwT9eovLjCqKEVQRaVvCKKdEn8v7EgVF+RgjmRC8YhpVcOI34R3fzT/rrLBInCJ8HWsC4iKWj83a+rbKmjCSoCis/2425QOpDPln9q6NEa5OwDskLA1f7/7Qg5qCHE8Ly1ql4lj7BSesfe4IfFsZLhGjnA81pWTh8WUUfcjfYY3OCEtGlI2RgCjas3ZsRuuLnxOiEEVkQdvKYXXmumi4OAHvuLDM+Opwj57UFOR0l7CoIsjLCIpQeAXgzRBOVyoGz/UQYrOON0tFYfU1i4QquNwslSMOR+issEgSHHEdUTR0rPx4CTo+WbLWhCU3g8VlHFvComjZVJ4dnxlFag7hwgS808LS8LWEfA/oc2XEHaMi9WXhRsS8iFyxTMs7Kp+8nH/uiLD443k5T0aIFZVXMPEzkiaXCVVKeb/0uVGOjaAkttYtYJ/7c1gyJBU5ryauL+9TbBrLx0ZYJNjNUZu1CJiXy1179ftxFJquW74/O0PnhGXGV7o/uDIk9SVo2g+5LNyJeMPfLzW5/lBiWfnkbY0qijVEsYiRGuVcuCjECixHG5aV2Xg9ud/YH2s7jl+UkLuERevQ9xNG8jRaX14mlpNYrqK0tTIxn6eRsMSHDUbXzWFclIDvkrA0Bs/x6mjL34ff2MLTwiLEx+AENWl4U0usiPJ2ckWxhSgcXiHlppMYjcjCos/EaFBs6ohNSkeOvzPCkhFlY0tARthan45TFJNcTtpxm7tA8PXldcVzd+Ta2OKXQ+bq7lFn6bqwCG9NyPfQpiCnO4RFkCDEisKhX2gjWRHOVgprHTyNmk5GwiLEbhbicVEltrZv+fi9WVgEHS8dt9F3ynlEUVgifS9Z9hXrNC6Y6M81wjKjdX8Y3T2VxIiuFo6vI5eHpyFx8G4Atpo1XUH8DlkmXYXv153H7ymobPi5yEL3JF2d6M+lwtLwkoR8Txl+Ywu5TBSKbqeLE/25XlhmujUh3wP7XBmhKxfGP4yOwx9GJOJ/hiXiz0OT8Mfhifi3kfG69RQKt9GFBLzbhKXRTdFWT+xzZQQvj18xSf1lSDIeeiAd8+7OQejwAkQFlyE6rBwR00sR8kAeAu/Jwoi+afjTsCQmNX2ZKhSupLPjDN0rLMLD4xF72vAbq9CPBSuP/2KR1MwHchAbU4HMx5ei8Mt1KMJGFGITCrAZ+diCPEbWpxuRvH8pIkMqEHhfNgb0T8W/jlKRl8JNUAJevmcdwP3CMuOR8YiqKdgBE9ZvWVNvVp8cZJ1ajJLb61CMDYyNhsLKxVbkYBuy27Yj9WoLotJqMYuJ7v6BKVozUlfWCkUX6UwC3mPC0nDzBIGqKdjBrwbMxvj7M5CysB6lWIcSrDcUVu53G5H1RgvSn1mNtMtrkPnBJmT9vA2Z2IGUq+sQPrUMk3pn4g/DE3TlrVB0iU4k4D0rLDNuScj38D5XMnc/EImoGSUo+XatobBy321BfGU9wh8qQkhAMUIeKUXIeMaQQoSNL0FMaSNSrjCR/bwTcS1LENwnD/0HpKpoy43IM6hamxnU3iynYvcO6o5B6zsyeyp1eeD7ELtxiDOcytt0GSdTON0iLA0XJ+RVU7CD3/Sbjdm9s5D/wlKU/tyCnPNLkP/GqnZhpW5pRujgAsQtXojkt7Yi6Ye9SMBBxOIwor87jPCruxC6tQXB0ysREVSBxCfWIuW9rYjMqMcjLGr7wwg/j7a6oS8hiUrusMkh2YgCMerUyhHnCJN7usvIs6fyTqimZR2fix1v5eN2Bc4k4LtPWGZcEW315OE3Roy5NwlJFTXIPLAQoUPyEXR3NoJ75yDr/FJkHl+CsGEFyHplLXKwnTX9diINe5CCfUhk0oojaeEYInACYbdOImTnegQPK0ZkSi1SPtuOmNVLMKdfHu4ZRLkt/bXwB3qNDHdr6kLG2gyqNNiYfy4O1JYjLFFKRsOGCOplb2/2VFFYYu9/dwvLmW4O3S4sjSFzOx9tuakp+E/9Z+FvD4Sj3/0xCLgvEWPvTcbY+5IxsncCHrg/Cn/sG4w7BszUbded9GLcx5qCkY8WIbmmRhOVSMS0EoSPLkTu8yu0ZiEl3CnRbpLWbrO0DmjSisFRRJK0cAohXx1DSC6LykYUIfHlTUi4uBGhD5dg+INpftlE1J40UwvAA5GWOBzGaFoba2Mexe2NpsWxN/srlxZtyz8XhWXan2mZ24U1xvGJ/rxDWEQnxyO6sinYq/8M/KlvqCamoHuyERecgawFKcjbmIziw8koOpiC3LVpSC3KQNS4LEy7J10TBMlN3penIEn9x4PBmlgn3ZOGiIcKkbWzCUH3WspKi7LuzkFiZgUq0IJSrNekpSXembSysAPpmrT2IolJKx6HzNI6bpIWHkPIPiaqgGLEnWpB4qc7EZFax5qImfiXAP/q/sC7xnjiNWniYHGjvJI41bE8eR/BB2uTgMTt+UwN1sYYWky5Yx6qw4VFEuMSpH16QliOTvTnPcIyo00Q6OAvmyuH3/x/LGJ6tHcq4kPSmaASUP9ZJOaDiGbEMuIYCYxERhKafk5G2YU0pGRkYXb/DAzuHYc/MnHc0d99URcJ9V/6zcafmVQfeCAKo+9LQtCDuYgNK0VqbTXyTi5Axc1ViAkq1cmKCOmdi5Lnm1GN1UxapmQ85bRM0tqKbE1au5AqSCsWRxDFpBWOkwglaZ3ehpDxZYjZvAKJP+1DZM1C7SniPwf4T6TV3pdv4MzOR/4OIkZQ8jKO0UBqQpwQUY6i+DbW5rASIzue2OfCom35f5P4PCIswoGJ/rxOWBqOJORd1Ofq1/0DNdmEj8xEyYkYNN0KY0IKZ0TYFNZ8JDNSGKmofT8DOSuzEDkmBzPvzsDQ3vH4n74h+Jf+szXJyN/pCLTdnSxy+8ODQbi7TwSGs31OZhFU0AAmqLnFSG+sQtGTC1D5+TLUYCWT0CpUMRGVfbkCIX1ydbIKZsRMLUTDz0tQhxXa+pVMWmWatDZo3RzyzNLK0KS1h53hfnMynqRFeS2SFou2Xt6H4NEliN6xUst7RRTNZ7LP9JvmIUVW7deC0hUG67gKsRlmbYA1j3bkCItLySiK6phNVL+MoCeS/Hv5rA2isCznfDf963ZhjbGfgPdOYZmxlZB3RZ+rO5lQHr43GQmRqaj7kEQVwghD/RcRqLwWg5Iz8YwElD+fgLqP4q0Kaz6LS+azat50OwsVL2Qja1EOYmfmIvjBbExlzUaKhAb0jtXE85c+YUxmoSyiC9GiOmqC/i/77P/6hKMPi5qGMDFRk5Sam0EPZCNyXAGSU0qRu6YapU81oubTRWhoW4Z6LNfEU8sQhVX86lKdrHhzMKOylB3nIjRiqbZtjSatNUxaLSixkNZ2TVqUjOfS6kjGm6V1cRdCmLTiXt+GhFsHEBZShSH90nTXyRexENYA9041Lc7tZZSjopev8uViFwcx6hFf1srhkRtJx0iE4rxfvCkpCkv+Dk8Jy14C3quFpTFoli7acsXwG4qsxt2bgtT8JDR8G4ymtmCUnIpGfHQqwgZnajksi+bUA1mImZ6JjJp05CxPR+GBNFS/lsa2S2sX1nxkMbIZuYw81H+ej4rLBSjYU4D0mnyk5OQjISwfMdPyET3BRMyUfMTNY1JKK0ZaSQmyl5Wj6GAVKl+sR90n85kEm9m+FqMJSzTRNGhYF1bh5UU6WXFhFe4pZ/tqYjSz/79U2wdJq4pJq1yTFuW1SFqUjOdPEHczaemfIGrSOrgJoRPLkHBzP+K+2IugkYXaWETdTehjyMLS7kGD9VyBmACnf8U3V8szqHKxiN0V5GZi+7aCCOXZX63NnioLi+Df4zFhjbEdjHi/sAgxIe+CpuCv+s/EyPsSmCAS0PjDPFS/EYbEuBQES5LiFT34rhyEBBQhNKMRIcXNjEUISWpCyKQyxIdmo/wZFl216YU1HwWMQkYRo4RBEU4Zg8RRyahiVDNqGHWMekYjTFJZwFgIioicEVbRK/oIK6R/LkL75qHsPH13rfk7Fmr7bGD7qWXb07Yd0jI9QaRkPEnLlIw3eILYxqQV04DImmYt3xV9bhOm9c3Bb3x8DKJRNxl3joelpLc4s6fRzKDiZHvyrKgyfJJCmohQ/FyeQVRO1BsJS57dVT52t2AjAe8bwjJD5u3VxWlW6aka5ZgSQlPQeHMuyi6EI6Rvlq6Sa6K6OxcROQ2Ie3mbObowPTVrT0DfYhX26GaEjC1BUnI2omcwpmYjszkHjd91j7Aqbqxk52OZw0pd16Q9Pax+jY6Dvpu+r8G8/8Xa/kx5LTEZv0F6gmicjA/7+BCChxQi5sWtiLt9COHlCxHQN92n81n04Ee+b7QEvIMPgzoDieP+s/omGPXLEpuKYrLcGuKsqs7M/mokLII/cSTk43YX1sYZ+pSwXAHliiJHZ6Du03mobA1BSL9MvaxYRBU+uQTJr27SIgsxj8Mf9YfzZhGJ682DCB5XZimJvBw03fK8sCgnFTW9uCO66pOD4m/Wav2vat7OZ/sqNn8/fS99H33P4va8lpyMJ2nZS8aHLl6OsIQ6U/l8shfB40vxv0N8t2loKKwB5ifYBuu7EpKIO2ZQ9cTsr67GaJxhjxIWdQmY0zsT5U+FoOn2bMTOS5WiKlNkFVfTgOwfxQ6VeyVpSU/NSFqPbWVNyo7IJqRPNiqvUZTleWFlbGpsz8GFP1qoRUwRYwtRdZ2arHRMJC06Dvp++l76H0/Gm/JajibjNWl9egDBg1mU9eYu7e/I/S2YfH82/slH+2dZExbhzgS8QsIgAd+jhEVP4DKqqHtCIMqeDLXIWZGsQgfmIf3AIiGqoMQzbw6ZKinlcTqaROYhLGZpBac0acLj+yw54Rlhlb25BCWvLmkXVtlXKxE11xRlxaZUaMKKnFyM0jP0cCATJmnRMdHxcGnxZPwSK8l43jO+IxkvDucJy5mPiEVLtXKJuXkIoSE1+NvgZP1N6AP0Gmzj0TpbJq+vcB9yN4ceI6w/PDgP4Y+koeFGIEhYiUlJgqxymKzykffsUvOsBqbpV0xPy0xTrXBpUSW1zON0SCv05b3twgphEUbVdWqCuVdYJS82I3SAKbJLrqzShFXBKPliJbKPN6Po09WasOJTq1CwnbpgUFcMekCQA1OOjY6LjoUn403SkpPxvGe8OJxHTMbHnN+E0JmViG0zRaCRl7ZhKosyfXG8oU1hDXBvAl4hIb1pp0cIixLto+9LRG5LFKuQM9D4/SyEj0rviKz65SH/1AKtspsqZ0dnSv60jBLPvDnEpZXApBXHKic96tfyWm0nEfxombbPlIIc1ux0fw4rY7nlmMGCpxdpwqLkOZ0LNevofJIXNCC9nIRF/cmoDxlFW/REk0urwnwcpmR8kzkZT9ISk/HiE0Q+nIeS8Ynf7tWmqYn5ar8mrOifjyA0rMYnc1n2hOXuBLzCEjEB3yOE9f9YdBUyNAN1H88CCav2wzlavypNWPfkIHdbnda0MiWc7UmroznUIa2OJ4ihFYuREJmL+q8885Qwc02thbCSq6sNhZV1eglip1NkRdKmZjF1fqU+ZKK0eDKepMWT8R1PECkZLw/n4SKn6DNsdgWir243CYuVR8TWtdokgvIN6O3YFdYAzyTgFWaEif56hLCG9I5DRlUMq4DTQcKqeWeuSVZ35SC1sAxNbdQEMlVMnrvhEQVPOue3j7ejxLMsLd6pklXSfeuQGOO5flilLzVrU8dwYSUVVxkKq+jLtQh9MAd1n9KwIxpyRMONqNc+SYuS8UZPEOl/HU8QqWxovx3DeTpyfSStqPwGRJ1Y3y6sqG8OIbhfAX430rfmz7LWB0jmjoBI3bYKNzEyXCtzvxfWnf1mY+79Wah5m6Irk7Bq35+rJdyjp+Sj8SbJwdQfiSomiYDnbkyVsyPpbJmMN+Vw5GR89IvbEDnWc8KqbVuBtAU12uwMwffnoOAZ4yYhnUNMdAXyN5O4aQgSjZWk/yZp8bwWHbe1ZLxxz3gegVIyPraJ7bVlZYewWFM5rGIRBvZP1d+AXoyjwlIJeM9C5e33wrqrTzjiQ5Mxv20quLDqPmFNwt7ZKDlD8qBKaer5LUuL526MpGV6WmaZjNd6gr+/GxHDc5kIPSQsc7eG0jeXovS9Ze1Jd1lYxT+1IC6zCgkRJKc5jGCYBnnT4G4aIylKi46ZjtV+Mp4P5yFpJaxYiIgVyy2EFXFpO6bfm+VTyXeHhcWgX355e4WbCIj2f2HRQOKCHTSwuUNYJafDEDU+D40/kjh4JNEhLVM00ZFw7shr8SeIJC3T0zI5GZ/w0S6EDc5Fw9eeFZbYD0sWVtGNNYgyTzkTPiiLRZiz0SEtKhuSFk/Gy08Q5WS8qfncIfSOJ4hJi5sQsWqFhbAibx5FyIhin5pW2RlheWqiP4UJvxbWnf1mYe4Dmah9byZEYSVGJyN3HQmFJ5pJHBRJ8GTzIq1imiItORlvepmDPhlvklbSBzu8TlixSeUWXThy11BzkMqCxBUEk7R4Mt7+E0Q5Ga/l+9rWIbqoAmGJ9Yj57mCHsOhBROZ8PDAwRXfzeSvyfWQPT0z0pzDh18L6c59QxM9LRtNtkpVJWDVvz0HEyCzWLORRBO/1TQLhlZL+x5tA1pPxpqaQZTI+5d0tiAhgTcIfnRNW/c+1qPyhFiXf1qDoa6KOUY+SbxpQ/v0CVP+4CHW3qauBc8IqeH0Fgu/tSMoTYUMyUHx9EhpuUZlQv7R5jFBYJuOpCwR1MuXJeN4znifjO6apKft+GdLebEQQTalD+y9mMVtbh7DC963XXl7hK+ML5fvILh6Y6E9hwq+FRdMGZzVTJZwCLqyCXeFIiKKnYrzpQxWSJ5q5tKhSdvT8tpSW9bwWSSvl2RZEPeJ40r2xrZpJqQKZn5Yj4xOi0kwVo4ZRy6hD+icNGlmfN6Hwm4Wo+HEJatpMEaAtYWUdb7aQFY+yYjJDkPPqaJR+PAENP81gxzIX+mQ8lxbvGc+lZUrGN9xagKIP65DxShWSn6tE0GDzIPIHchF5aWu7sCI+OYiQCeWYcW82HhyQ4vWzOcj3kUOoBLxH8GthPXRfIkovUK6mQ1ip+fHIWUlNHp5kpqaPKC1q/lDU0/GEbL7WHDNFNSQHW9JK2rMUifGOCauxrQr5X5UyIZUwyuwKK02jkdGE1E9Yw+3zhSj8folNYWWfsjI/FmsqJ+9+FFmto5F9fSwK356Iis9noO7HIDS1ycl4klYuK40CJqkSVH9dgqL3i5DzSiHbvgSZrWWI31WMeXd1zHpBU/G0CwsnEN52AqGXdyIksREze+fgvkHJ+JXBDdntUJ8fg3vJEdQ4Q/fjt8KiCfqm9U9C7cfTIAorZkoaSp+gTpP8cT7P1/AoQuxA6fgTRN4vKb68HlkLHBNW+fckKZJV54SV8skCJDPyvl1iVViFb67UyYoT8lAC0p8OYNIhxjIeQdb1icj5+zTkvxmIoneDUPx+OCMKhe/EIu/1eGS/ksjWS2FkMLIZBYxihMVlac3BdiGOKELUjUMdwtKGL500DWG6yMQ1sRzDvPGtOzQUxOB+cghKwMv7U7gUvxXW7/vNRcjkWDT+PAlcWHUfzUI4a7bUvEtNHsrVUARBSWbqPGmKIjoSzbz5o0/Gm56Sycn4dShu24DIicUou+CYsPK+5LLqmrCSPlmI8tsrDIVVdrsFMVGWU9+0S4XGUIaGIvPqCCadUYwxjPGMCYzJjOmMWYx5jBBGBIM1s1sTGMmMNJC0kg5kYc59pqFO7dyfg4jWncbCotktvjyG4JyFeKR3Bu70plkduiKsASoB7278Vlh39YlAZHIoa3aZhFX58hxt/GAIa47UfUJ5Gp6r4Y/zeb6GS0tOxnckm/V5LZMgCt5aaXpCeMO+sJrYfnO+cJ2wym5ZERaj+MZaxCaW66Z9NkmLERSMjOdJWiPN0nqYQc3FSYxpjEDGXEFa0Yx4RhIyrqRh9tiOgeTt3JuNiOd3WBeWeQLE4OyF2vAdr4m0uigsNc7QvfitsAb3jkVs/Ww0tU1GzTszETo4wzTQuU826j6j5DI9FSNp8T5I1EwkaYnJeJIWz2uJ0jLltTqktRKlPyxH7MIKJMbSto4JK9fBCCv3iwYU3GB7+3oBsr9o0gkr88tFqGozbhKKPd2zn12GuIwq3YykQXdlY874CKQ8Rk1DktZoxjhJWjMZc8zSCmdEIfNaHObMSsDcu/STIAbdn4uIN3bbFhZx8wSC59ZgYD8v6Q1vMAeTs9DMuLr9KlyC3wrr4buTkLx1Gubfnoz4yI4IQIuwPqbH+ASJiyeY+YBgLi2jZLzlE0RNWm1LUfwp26q1GmFTC1C4zzFhaTmsH8qR+aleWHlfVqPk2zpU/9jEhKt/CUXNz0tQenMJCr9bjOIflqK6zXrSXRQW5dmo42v+py1IO7IE0XEV7fIimQfel4yI6ilIf4bERdIy57U0aU0VpBWMlJPhmMWa3HP+ZiAr2t+4EkT9aBoQblNYxNsHMa9/Pn470guahi4QFqES8O7hF72Gdm2OdG/kH/sHYso9Sci7NAFlT81FsPAWZBrwXHw5kImAxhaK0uIdJ42S8SSdjmR8U1star+vRclHVch5tRQZrWVI2leGiNE5aPjauZdQ1N2qZGKqYtSg9lYt2zfly1zbcVQWFj3VpI6v9GQz+50WxDc1tA+gnssENHcAE/ysMESWzULC+mlIOTIVqUdmIGnjPMQURyI0MAGz/i/N4qmgTPiGVZZPCW0Ji9jcos0F3+1PDl0kLNXNwT38QvsPem2WwfzJvspv+81F4OBYFL8zHqklMZa//HfnIGl1IPLeeARVX01Hw605TAZ8iApJiyfjTdJqastE488sKruZi8ovc1H8QQ7yXs9G9vUcFmnkM4pAj/ZjUguQ1Uyyck5YnujpbktY1FufhhmlPb0KIQPyLMuKNRWpuUjw6aPFGVWtERpRjejvDjknrJ9OYe6QQvy/7h7CY0NYY+JKcOX66yhfuR2/HS29CswANdGf6zEJixgdY/VNFb7GX/qEYs60MJR9NB4xM1N0worNDmWSeQiUXM5+5VEmoMkoeHs6it6bheL35rF/g9nfoUxq4ch5LYqtE8XWjYXl07FMhklaaacLEPEwk9qHnn/NV/X3y1H2rvVuDY4Ki3rrp7/SgtBRBToBOUPI9HJEf7zPYmiOQ8IiihdhQDfP7GD0zsu/TI7H+oOn8fPPP7fzxnsfsgh0sW5dC1QC3uV0CItDT0kGz9YXvg/xYO8ohKTPRsUHjyJiTJpFhdKGjoxJQdY1eoxvkpYpuTyRMQWmR/n0VIxyNUEMkpspyayXVgbbTzaiopm4mkhUnhdWcmkFQvqx6O+G9aeEjgqLBnNnvLUB4dNMA6Wd4p4chMbWIuazfZaDn50R1tM7MaV3Fn7djU8MRWGRqCia+vyrGxayckZcaqI/16IXFseHm4kj7opDzLIpqPp0IiLGWQpLk9ZdOUjeRoLifY/oiRgll+kz6n9ET8VmMGajow8SSSsSpn5Ipkf6Wa2pSGzORPSj9OSRukR0TlhlT1eg+BQl9Z0TVg2LriLGFCBqahEqb5p64HdVWNpcXze2IG7pQoQMdSzaCnmkBFH71yL2hwOml1B0VlhfH8e8MSXd2iwkYVHT7/GLL+rkZAsuLpKcfD+qBLzrsC4sgkVbvYZZf+WRN3JH/5l45K/xSDn5MOq+n4i4YH0fIYqywiclIPMl3mGSPxHjnSb5UzGSFnWcpD5IwYwwmKRF/ZDikLIrBaEDclB5lZ4qdv7Nz4nxBQi+Lxtlz1K05biwan9ajrjIEhScXeCSJiEXVpZ5rq+09zYjurxR3w2Ci2p8MaL3rUbCLdPkhTTrapeERcQ34t5Bnp/ZYUBMJSrWH8Ab73+kk5Gz7Hv8aU1e7XkuDyfgx6Y3aecif+4P2BYWR3tzhW9EW//abw6m9mFCef4hNN6aiIy6aF1F06TFoqyExRRJDYOp7xEfniJLi/f25tKiJmIEUg/EsaZYNoqPkKjoiWLnhVV6vlx7kplRT8sdF5Yrk+5GwqLZJ7QJCr/bgcRzLIJavxTRqxYjZscKJLy9TZseml7zRVNEu0xYi1aiImktFu06hZlFy/D7yen6+9EF0H5p//Q9b7z/sU46roIitYymFjyUUqs7BldBss1cuh0bjp3H5ze+af/umcXLdOv6Oo4Ji+MDzcQ/PRCMwIkhyPn7aDS1TUTJmXkW3RpEQgemI2U3CYqkRdEWSUvMa5G0xLwWSSuINSejETo4C4UHSFTUb6trwqIcVvHJCpQ+SZ95n7Bo/nrCNLMqvVTW9DZstwhr53o0RK+xqPRUCc9cbtXkQhWTIgji/+YV6O9RAVpOkJii6tZp2+8/d9mtgrIHnQcdA50HHZcj50FypXVoXTqPivUHNTldeeUtC0HJ0HfJ+/J1nBMWQc3EofN0ovAWHrgnDCFZgchlwprfNgn1X0zTJd4tpDUgHQnzpyPjIkVZXFo8r2WZjE87OQ/RyYkIH5WF4tPU7YFwjbA6m3T3O2E9uQOVQctx69YtXQVUOA9JTleHfRjnhcXxwmbirwcEYtxd0Ujc/QjyXh/DKjqNI5yMjFrjZiFHGwQ8PBWxxXORsncC0s+PRcYzDyP9yQlIOTADCY0hiAxMYqLKRMbCVNR9Tj3iafyhEpbLhXVxF0oCF+PWT0pYroCiSl3d9WE6LyyOlzQT7xgwE33uDce8mDnIvBZgIayqV2ch5EHjISSc9IpEpOSkIHJsJkL7ZyG0H/t3YBYix2UiMSkdBbtTUPcFdSilnvBKWG4T1jM7UTZnqYqwXAQ1GX8/OU1fb32UrguL6OZm4h2M++4LxbSh4Uh/hp74jUKuIKz5bVOQkh2vkxQnekYaGr+jITqMtlA03IhA3SdRqP8yGk1tNM6Qer/TsB0lLLcL69gWVIeu1FU8ReehnJeuzvoorhEWpxuaidSN4f57wjBtSDhSH6eEOeWiRpmT7mZhYQqq35qFsKEZOlmF9M5CyRORML1BhqQVCtPYQprJgT5XwvKosNauxZK0zbpKp+g8FGXp6qqP4lphcUaEekRcvfrPwPC7YzDz0RBkPMeT5iZhZb8yWuvWwIVFE/gVHgzV+juJwspopKllgqCE5SXCymvG/hWP6Sqdomv4S/LdPcIiPNBM7Ns7SuvCkHFlOJMU0SEsetpX+8MEiMKiKZKLj4UiYkw6gu/NQlp5PJp+ngslrG4Q1rsHEXP1APv+p9n3XWCfnUbIz6cQPKUCz5+9rqtwiq7hL10c3CcsTkCUW6ItGuA8c0AcMi6RqKgflV5YlV8+AllY9F5CerVV063ZML1MVAnL08IKeXoHQoYUYemp02xPb2jU4QqT2CHEDC3Dl59aH7un6Dz+EGW5X1gcrZnoxBt1bXBn/1mYdncK4jdRz/ShVoVV8uHDsCYs00tEfUdYjd8vRu3Hzah6uxmVbyxCxZuLUPneElR9sQw1P/uIsG4eR0j1UkQOLsHKJ59olxWxHa8hbNdG1ISrhLu78IcuDp4TFuGiZiJNfxyaSMNlBtsUVv4bD2lTJPuKsOq/qkPFlRrkrqtAckYJYqYWImpkAeICSpD0cDkyZtQgJ6geuaENyA1pROasOqRMqkLcqFJEDy9G+PACRE4oQlxcGZKra5CxlR3J+SUo+ng1Sm6t6z5hfX4IYWtXI3xcGSoat2LHV60WsuJEzKvD2b0XdRVN4Rr8oYuDZ4XFGRne6WYiRVfT70tG8lGSkm1hZV8fg7qb9KTQO4XV1FaF6jcqUbC1DPGRhYh5qBBpU6pQW7IcLXu2Y9/zR3Hqoydw9vvzuND2DC7gWcZFjfO4pPEk49ztS3j8u6exYst2bG86ijdeehfPnXoZp7ZcwI75R1EyZwnCmMyigsuQUFGHtL2LkPXCKuR9sR75bfQ+RTcI6+cjiHxxB8IqF2uiyk1ejo1/v8S20ouK2PbRVSSPrsYXH3+lq2gK1+HrXRy6R1hmtAkDnWwm/q1POIKnhiPz2iC7wqIhNmWfUB7Le4TVdLsM1a+VIXtxEWKn5yF+TAnKM5ux6dhOnPzwMVy4fR5Ptf/vacYzZkhWxsJ6Es/hHGPb+SPYVHUA8v+tK92LZQd3YeXZ/ahesw4ZaU2ImVSKsJGFiJhYjJj0GiQuX4iU48uR/vf1yPhyMzJvbXdcWG0HEfftPsS8vhNRR9YhvGwhQicyCY+vQtX8rdj46kXsb3uNbfG6VWHVr96LdeV7dRXM3bzx/icatsbk+RO+3sWhW4Wl4WQzcdR9iYiuo0HJAx0SVt7r49CoNQu7V1i17xUhb0Mh4ubkI2FcCerLl2HX0/tY9HSGyehJBomKuNBpYR157xzqIlZbyOrHH35CwdyFOPH1RTyOFzROM463XcbeGxew9qVjmL97O0rqViEttgmx48oRPrIIoaOLED6tDJEx1YjKrkd0WROia+cjqn4houoWIrKclVB2A8KiqhE6qYytX4LYhyuRHbcYdat2Yt2VJ7H/5nWmtNcYr2tYE9aOL68hcVw13r7+vq6CWYMPGhahWQtohoIzl20/ZSRB0eBjuXlE+5RnFhWhebL+MiVe+1f8nGZkoM+J5q2HDD+3hrgfyjHJ58ShY5OPp7P4cvK9+4XFcWCIDw2/mXJvKlIeIzE5JiyafaHqa2oWel5YjT8UIH9rPuKC85A4gUVYTStx4OoBnPn6MSags4xzZlwjrCdY0zAnsBE/fHezXVintz2FZZt34gyebxfW43iRScvEY7iqcQovaZy4fRUHbzyHPe8+ja3Xz2HTlTNY/9RprH7sGJYdPYwlBw9iyeHDWH7yGNZceAwbrj6JLW88g50fXWGCusYahn/XOKhBsrIvrKqmbWhO2airWLawN8MBNX3kbYgrr76tE5UI3Wflq7brtiNIMLScJukTPycx8XtU3Fb83Brifmw11/5vXr7ueDqLL3dx8B5hmbE1r/yd/WZhzrBEZL5EzUHHhVX4zsNoavOcsKpfyUVaaS7C7s9FcXwDNh3fhvO3H2fSoWjqCTOuF9Y5XMaCxRvw/BOtmqw+fudzZEypw+kfLzssrJMaL2uc0LiG4xqtOGbmKK6beQVHzBzGqxrOCmvjq5cQM7gU773m3JQvorCoohM09Yp4L1HFFLehyEqUFUUaFNXQVC18W36vNW/VC89ZYb3x7keIKFui0W9eZvs607Pq2j8X91O+do/FOdFxcWhKGvl4ugJFo3Ld8wW8TlgaVpqJf3gwCGFTabZPkpVeWJkvjkLGCyQrS2FlXx+L2u8pj+U+YTXezETR/mzEzc1FzLAiLGxegdOfHWWiOc0gWXlGWMc+Oo/62DVMVp+haGYztl88ocnKG4W156fXkB60AHuWnNBVKHuIwhI/F6OUzKU7LJaJQqP/lve54ej59nuNZguV53J3Vlgi9Dlfx9r0y7QOf9OOLFtX46tdHLxTWBypmfhffYMRHUszfuqFlcMkFb1oMuaG0mwNlsIiit57hEVZrhdW/WdpyF6ShcjhucgNqcWmI5vw5I8nmGCo2Uey8qywzjIWrdqCjMA6bHriCPsmk6y8UVgNq/eiaHqz1oSVK5Q9rAmLmnz8c1lK/HOKsijakvdJiC+UkPNZnhAWf9OOu4Vlq/npzXi3sMzwZuKf+oYgJpFeCDGQCWooalvnYnlrHja2smZX63y0PF+PcHYzhqRTHy2ataFDWNnXx6H6G4qyui6shq+SUbg3DQlRWUh6tBTNzctw6PpuJpWTjFNmuk9YJq6wbyG8U1hrn3sKmRMb8O7fP9RVJkewJixqPvHPxQhLFJmtBDZJioslY36LxTKPCGuA6U07JFV3Jd19VVaETwhLgzUT/2tgJGJiwpDXOoKJKotJqpHRZGY+YwHWPNOEoNEpCIpnkdZVk6xMjEPea4+g8XbnhNXUFofKl5KQUZ2O6IdzkR9Zi61nNuHcTWr2HWdQVKWE5Yiwtrz7AuIfqsQzx40rriOIwtpw7IIGVUQxRyVGKbYiLxFRPt0lLOKOgEiL+99VSXdflhXhO8Ji/MeIBIRPisei1iQmJ4qq9MLa1LoQLRebEDUjE4GPhiLlGE1zbBIWvWCi4O0JTD4zHRNWWxTq3o1H4bYUxAdRNFWC+Y1LcPj6Tly4fYRJ5BhMslLCclRYO754GakzGrG6fLeuMjmD/aeEByzWpyYgX2ar8lO3BC4NOfHuSWGVr97l8qS7r8uK8Clh3RkQh5DBOVh/tcamsDa1NmPjtWYUVBYjcGAC5gWFIbElEBlP0fzsjyD/zYmo/5Gk1SGsprZg1H8ejupXo1ByLAG5C9IQPysbcQFFKEltwNZTG3D2uwNMHCQqiqoIJSxnhLXzq2vIjFyEEX3Tcdfcgi511hSFRf8tvl1n0a6TuvUJsf+RUY6InuqJ7xWkdw2Ky7mwKCEvfk6v9XK1sKyt01l8Ncku41PC+hVjcu9MLDtQZ1dYJhZh9YX5KF9UjoSwHMwZmYxpwyIxa2oY5gSFIjoxBgmxKYiblYaosZlInFCI3LAq1FUswIoNK7DrqY144pt9TBaHGIdhkpUSVmeEteeHV5ARsQjDHkzDPwaY3uzclbyMnMOiCIT/TRGUkQzF/BY1Helvvow6mw6ILGkXBiXf5e2pw6gsps+//NqiywLJS96OcERGjqzTGcTo0tfxKWERA/qnoiiz3GFhdbCYsQRrLy7C0uNNWLC3Hgv3NmLLU6tw8oOtePKnPUwKJKf9ZiiaOmhGCasrwtr9XSvSI5ox4kF9h0365ZcrmCPIwiLotVn8s8wlxpGO3FfLglERmiwoypKjK+Lxi1fbhUJQpNX+slTzdvI2HEdkJK7D6TU8RDs2W81Ye9C2unP1UXxOWPQa84iBeVh3sXPCMrGUsUxj++urcO7WLiaEvVDCcr2wdt54CSnBTRjTJx2/Hm2KrEQo0jGKhuxhJCy5Y6hRs4+wmsthwqIoykhWnPKVeqkQFGXZ3K6TwtK6OQREdVpYYlTpD/icsAi6+cvLKuAKYW1qXY5DH22AEpbrhbX94xeQOLUOI/um4x8MZMWxNozGFiQjjvg5PQ3kn1vra0XQMqrM9N00rpAivTPPXdOtZwSJibo/0BudSTLWBCRvQ+sRcodUo3VEzjz3svbSVHl9R/Cn6IrwSWH9dmQCgh/MxfJjlMvqurA2X1+JU19vhRKW64S1+bWLSJheh/6sCW9LVkRXclkK61BeTi5rX8cnhUXcPzAF8eMKsOEFHmV1XlibWldg66urcPYn6vyphNVVYa196glEDi/FfYOStQcl8rUzwlY0pOgc1HFWLmdfx2eFRYx9IAPFBWVwhbCIXW+14EIbj7KUsDojrGUHjiJkYBH+NjhZd71sIT6xU7gGXx3gbAufFhb1y5rROxsVDZTP6rqwiD3vrmPSUsJyWlhtr2DJnsOY0zcP/z0sSXet7CEPVFZ0HbmM/QGfFhbxh+EJCLyfSauepNV1YW1qXYm9767HeU1aSliOCGvfjRdRVb8Js/rlaU9x5WvkCLaGyyicx5/6Xon4vLCI346Mx6TeWchJLsbGl0laXRMWseP1tTj7EzUPlbBsCavlqccRG1CGKfdl4t9GxeuujaOoxLtr8ceEO+EXwiJ+ExCPcX0zkBJUiLXPUvOwa8La1LoK215rwelvKRGvhCUL69DNl1DTtBkh9+RiYu9M/EsXZEVQvkWudIrOo4TlA/zj6HiMHZSNyBG5WLCDujx0TVibWldj8/U1OPwJzRhK0vJFYV1xqbCO/PgSFqzfg6ghxQi9Jw+TWGT1z+ahNl2hsx0jFcYoYfkIv3ooDgPG5SCkTz4K88vQcolyWp0Xlok12PHGBpz5gZqIviOsM7cvIz9mIUozl2LL+WM4fetK54TVdg3bX72AWhZRhfctRF78UmSHNyP43lz0HZCiuwadQTUJXYsSlo/xn5PTMXtCBSKH5aO8oRLrrlATsfPC2tS6ltGCXW9twmlt1gbvFxZFV4//eBktxw+iMHERogYVIXNuAxoXbkTLicPYde0JHPrkWRy98RyOfnsZR9i/Bz65iJ1/fxItjx9H08ptyIlqRvyYCqTPaWSR1S7s/eg5VFauR1hgBaKWL9H6Wsll3xloSA0l3ruTyIrl7XOt+wKRFct058ARx1X6E34rLOJfJyRjbHAVIgLKEftQARrX1WPjta4Jy8Q67H57C05/ewAX2ri0vFNYYg7rxLeXsPHcUdTP34C82GYkTahC7MgyjbhRjADTvwkPVyInYiGqqtZh9fGj2PPBszh2+5rWJGxYtBVhE0uR+NFOxBxYjfsHukZY3kCvwXP0Y/m8HBr/KJ+HP+PXwuL8x5QMPBxYjqD+hUicVMTE1YCNL3NpdU5YJtazpuJmHP1sD87+RBGXdwtLl8NqexHHf7jCIqtLOPwFwSKt767gRJupWSjnsNacPI6Ih5is3tmmvUg17sJ6DOqfqitvX8UXhfVLdszyefgzPUJYnN9NTMWwh/Mwp18+4sYUom5xPdZdIml1Xliczdc3sqhrO459vg9P3DzGIi+SVteE9dinZ3D6M1rPTcJyNIfF2PriWcQ/VIH8F3e1v/k54a1tGNenY+K8rkA5LP66ru6ifPVObTCzz9GyT3cuhK33L/oqPUpYnF8/FI8/jUpGQL8MhA/LR2ZoGeZvnI8NL1C01TlhbWrdwNhoZhO2v7YVu9/ZhUMf78dj3xxjERgJzL6wztx4Amt3bkNOcD1ropViyymaRaJ7hbX7nWc0Wa04fBhZONgurMTv9yJwYG77hHxdQZ51QdF16C3Ycjn7Oj1SWCL/OioevQemYOJ9mYgcko+CrEo0712Ijde6JqxNrZvNbGlnyyvbsevNPdj//n7WjDyKk1+fxOPfn8aJD09g1eZNKIhqRASL/kpSmrH5xB5cuE1xlhubhA4I68gPLyJtRgMal27DXrZ+Kvv/XFhJOIDQoEr85/DO9W4X6cycWArbUJQll7Ov0+OFJUIVb1C/NMy4NxNBfTKRFFKI0vnVWLCHXmxBUVfXhLWpdSvWv7gFiw6vRnFdI1Ljy1mEkoKp9ySiKKMRGw7twOM3KArzUA7LAWGt2H8I+fFLcOzWy9jMvitFElbUyqXo18WuDarTqHvw5VfSW0MJywCaEoXkNbhfKibcm46Zf03F1L8mYvaQFETOyGGiKUJeSSVKF9ShelUT6jcuROPWRWjasRhN2xezvxehasVClDQ2IK+4Bump5YgOzMfsoWmY9Nc4zGH/JseWoai2CZue2oEnf6bmoT6H5Q3CEpPua9nxyMKKe2UbJj+Q6fA0Mkaogc/uw9/yWEpYDvD7EfGY2TsL5dtL0LhlAapXNzIZ1SK3qBIZ6aVIjitGYmQREsKLtH+TY4uRnlaOnMJqlDQ0oHLZAtRtWIwlR1jz8upW7H57L45/eQznb1Muy3rS3duEtZp9syysxNusWTi7vEvNwiuvvK2raArXQH2y5PL2ZZSwHODfRsYjaFAWcq4FY6U2G4RzTcKtr27D/g/247Fvj+PJW/S00HrS3buF9ZReWDiIqK0rMezBznVvoLnZ5UqmcB3+1ixUwnKA/xmahKhp6chqDUJda77Dwtr66lYc+fQAzt2iPlnOd2vwNmGtY8dhJKz4L/dgdr9c/FMnnhZSYliuZArX4k/NQiUsBxjULxVxeQmasGpbc+wKa/P1zTjw0V4mKupI2vl+WN4mrK3sO4yElcAIz2vEvU7OMkqoqZHdjz89LVTCssOvWdQw9b5MJO8N1YS1qLXKprB2vbUdp7874pKOo94mLKNuDVxYMS9txaMPZuIfRuvL0BpqwLNnoDcJyWXvqyhh2eHPQxMRPDYZmVfnIqc1BOu0TqV6YW15ZSOOf7GfiYoPz/GBoTlOCusw+zudicpIWPFthxAcUYU/ODHjqJrH3XPQj4Nc/r6IEpYdxt6fjuj6cBZdzUV5ayqM+mFtf30zzvxA08742FhCJ4VFg59zcchYWOzzqBPrMLSfY8l3lWz3LP6SfFfCssF/DUvEnAEpyLg0VxOWqTloKaz972/HeW3GBu+frcEVwipjn1gTVuznezEroEAbPSCXpYyKrjyPPyTflbCsQC//fLg3i66awjRZZbcGseYgDY42CWvrqxtw7Is98Pb5sFwtrIVsjzphtR1E7Du7EHWkBSEzyjFwQCr+KcC2tFSy3fP4Q/JdCcsAGsx71+BkzJsch4znZ2vCKmmNM8uqBVteXY/HvqW36nj/BH6uFtZm7Ukh5bFMwop/fyfCcxoQObkAqQV5yFmVh+SsHEzpm4F/H2ksLerMKFcmhfuh8Zq+HmUpYQn8mkVVNCHdzMEZCOmXhaCJCUg9Z2oONrUWabLa+vd1OP0dyco3Zhx1tbAOseU5OKwJK4HJKmxqMXJWF6PhRhnmo4RRwMhB4d4sTBmUYdg3S0VX3Yev93xXwjJDTcDh/dKQmJSMmrcj0fB1NLJbkjB7WjSyrszD6taFLLJqYZEVzevuG3O6u0NY2qyjbG+JX+1C2JxyFJ0oZ4KqYpCwihn5jGxGBrIWZWDEg5a/6O7qykDRAzV5aP88iqB/6W/KlzkyG8Tl1td10xA7yudf3dDtz1HWHzxtsa+yldt167gKX0++K2GZoc6hqSXxaPw+mFW2UEYkmn6OQ2QMi7KWJ2Bj6xqc/JpyVr7zEgp3CWsT239UKVNSHUVUNYxKs7CKGHlmYaWj8VYKYmZn4H+HdLwJ2h3J9kW7Ttlt6tBbea688pZuW5HHL76on9HTQd5470Pd/hzhjXc/wm9Hh1jsiwQmr+dKfLmLgxIWo+/AFCTEJqHp1mxW0YLahTUfcSi+kISImZk48P5W+OZrvlwvrI3Pn0X05AI03qxjZVTNqICpOVjIyGVkMdIYyah+PQmB/TK1JLw7ujI4k0gmqdmSVncIK6JsscV+Itnf8jquhgQvl42v0OOF9d/DEhExLg0NNwJZBdMLq/7rJIQ8moKTH9ELVZWwiPzUpSjcR1EVCYuag9QsFIWVaRZWEiMe6ZWp2uvAXJ1sp1ke5Ov5+8npyFy6XROZ0ZtjbDVJZWH9ZUq8w3RGWBRJWXzf5M7tx1l8Ofneo4V1Z0AcZvbNRMUVEtV0Q2HNb0tCQlwmdj61CUpYrdjz4XOIGl+Exm/rWfnUmoXF81emhDvlr+Yj1SysONS+H4tZ/TNx7ZV3dJWnK8hNGxKinKuiBD9FduJ61qZjloVFf8vruIrPv/xaE5T4fe5uCorQHGRyffAFeqywfjU6FsMeTEPW0jBWqSbBqrBYpctsysDKjSuhhNWK5i17kVZeysqlASZh8fyVZcJ9PlIYieYyjEJqUTLO7n1WV3E6C4lJvJ4UMciy4shNIPpbXofwpLAy5rdYfJcnmoIivpp877HC+uOwBESHxqPxh4mwJ6yCPemoq1gIJaxWZEcvRNnTlGinCIv+pfwVCYwn3Cl/lQ7KX81HAiNWK8vq1yJRE7UKt366pas8nUEe0GurqSe/Bdla09RTwqJEu/g9nmoKysgRqi/QI4VF/a0efTAdZc+QpB6FPWGVnk9HcXIderqwjt66hthJpaj/kqIrnnAX81ckLJ6/ImHFM2IYEVqZJgXl4P3XP9JVnM5A0RQ9ceSQlOR1OPvPXba4/t0tLLkp6M5uDLZw5oGFt9AjhXX34GQkJsag6dY4OCKsyqvpyAmvgrcI69zNZ3DmO7ZV20WPCmv3+xe1aaCb2hqhT7hT/oon3Hn+ioQVDZOwQpA5Px5HN5zVVRx3I3eWdKZJSLkmevffmLgSi2X0d2dyTs1bD1nsR4RERk8NKQKTt3MHlN+T64a30+OE9c8BcZgxMA2V1yawSjQWjgir+o00ZMwth7uFdYFx+NXjaF7agsr8JWisX4Xt5/bj/C0S17PYe/koipMWImZsBSLGVCB9Vi1W7dyBc22XPCKstWdPIr2W8lU8fyV3GOUJd8v81XyEg4RVdiEcddQsvOWaZqEjyPkrwlpPe1lYJCQ5GpLRmnMOCsaoz5U10pvW6rZ3B/83N09XPt5MjxPWgP4pyGwMxvy2ADgqrNr305AaWAp3Cuv87SdRX7MCIVNqMKVxJx5ZewLjm49i2rxlKEppxtLVGzHvoToMLzmDIcsvY+j6KwhY+gSmhK9CRfEKPHHrotuF1bhiG4oOkqRIWLzDKM9f8YQ75a9IWB35q/mgBxvBqP9iHlKmFuOzj77QVRx3YCSrivUHdOtxZGE5CknIEWnJfa7sQVGcvA9Xk9G8UVdG3kyPEta/jYpH0PA01H85mlWgUXBUWPWfpCGJVTR3CmvpmvWYPbsRE569gHFPX8SYM89h1PEXMHzfi5gYswFzHyjEwNrL6Lf6OgZuvIYh21/CsP1XMerQFcwIbMayTdvcLqySfCbHF3jCXe4wyhPuPH9FwurIX2nl2jYbSQnJuHLWuFuBq6AIyiihbO/9h9aERULKaGphEddjWvPQKOqyJxe5z5Wj+3V3pEXHdceoCF1ZeSs9Slj9WHSVs3IOqzwj4JSwPktD4pQiuEtYT3x7BmEBJZhy4XE8+sIzlsJiUhq6+QUEjqzBsKIn0H9tKwZuZsLa+RKGH3iRrfM8xu04i+iHynD622fcKqysiAWoeYdyV0YJd32HUTF/NR/zGLOQvTIKuxcf11UcV2FtmA51IrXW7YFjJKwZWXWG4wTLV27Xrfv4xau69TiyjJzZr9F6roKeTv5yUKCuvLyVHiMsmjVgzsgUNHxF0ZWTwvoyDQmTCuEuYW04vB2zilZh0itPGQpr8LaX8VDmAUyavhL9W1oxaMvLGLqbCesQE9aJ59m6lzFz3kJsOn3QrcJKYs3VhhskK56/ImGJHUbFhLtl/mo+5oKEVXaeNQ3j1rg8j2UtqiIW7TqpW98IWVgkGVuyoOhIXJ/6VsnrdGa/coKfoi95HVdCkV6v4SG6cvNGeoyw+gxIQdZi+pUnWTkprC9IWO6LsGpKlmDGoYM2hTVoxfOYPbAMA9eY/h625ypGHH4BAaeex0Nnn8PU0i1YsHiD24RFr6qPHV+Kxu9JWPKAZ6MOo5b5K5OwAlH3SSDSp1Tg2xvf6SpOZzH1Zs/XXXNqAlpLsLuCK9df14lIXocg4YjrNW+1/WozitTE9e01N7uKJsiBM3HH6GhdGXobPUJY/xwQj8BB6ah+i7oxdEJYn7Mm4VT3CaswvgnTnj5pU1j917Vi+ugGjGg4Z8pf7buKkUeZsB67grHnnsPkxp2orV7jNmEd/vZFRI4rRONNiq6MOozyhLtlh9H2/BWoKT4TTT9NQ8KsDLzz9w90FaczWJMVjSeU13UH4lM/+m95OUG92EUBOdK/yxERugp+fL2GztOVo7fRI4R176BkpORT04TLyjlh1VHSfYr7ku5FSezbL5ywK6yJM1fjofzD7fmrkcdewOjHL2Ps+UuYWrkFDY0tOPkl+5Zbz7lcWAe+uILwsXmov0myMspf8YQ7z1+JCXeKbKlsZzCmIiktHpdOv6SrOJ1B7mNFg5+po6i8niNQE08c0EwRlLyODK0nykVeTnRVWNZE6CrECNDbE/B+Lyzq1T65XzoqXiQxdU5YtR+kIXVGCdwlrNry5Zi5ZrtdYT0Sshnj03Zj6C4mrIPm/BUT1rgLlzAzfjkiBhUg+pFipEyrxtYLR10qrL0fP4eQMVmo+ZaagvY6jFK5UcKd569MCXeTsKYga1EEDq15XFdxnMWo4yMN2ZHXcxR5fJ+9ptvnX31tsX6/eZm6dYz2a6/DqTx0x9p+XYVFk3XwHF2ZehN+L6w/DU1EXFQMmn4eic4Kq+btNKTNLoO7hNWybytmBTfaFdb48K0Yn7oTQ3eb81cnmbCeeA7jTzyJoMElKL1Qh/Kba5B8sQUx0ypx4M2zLhPW7nefRcjDmaj4nJqBPH8ldxglYckdRjvyV6YynozC/fOwtnS3ruI4izzjgLUhN46y7/GnLURhL3ckd1WYkVWrW8doPXv7lXNe7h4YLX9fr+GhunrkLfi9sAL6pKP4+FRYyso5YVW9mo7MoAq4S1jH3z2OwLvTMWX/YZvCenTeejycsxfD9l7FyCOm/BUl3GfGrkD05Fw03W5CBdYiHbsQ3rQYS9ZvdZmwtv/9AkImZaLoPYqoSFgkLjl/Zdxh1JS/ImFNA5V1+bOBqI9Zras4ziI/FbQ2bYyjUMQk90S39oSOoiC5q4K1yMlov9bWNeoN70gTsivIwvLmBLxfC+tfAuIRNDINjd9Qr/bOC6vipXRkh7lvLOH5n88hakwBpjxUjAlPn7cqrCkTl2BM9Qn2mTl/dfoyJtXvQdDdOchekocmdAgrYuMqNDavd5mwtrx0DqHTM5H7Wi4ab4v5K95hlCfcef5KTLhTuc4E5a+orKtenYaSoIX48eZPusrjDPL1pohrw7ELdrHVbNRVXgb1UKf53mn56+9+qK0jS8VeYtxd+3UFRsfWa2iQrny9Ab8W1l+HJhkk250XVvmldBTE1MJdwqKe7rXVSzHhbwmYMrsWD599WiesAS0vI3BoJUasecaUvzp6BVNT1mHmg7mYOjAbldcshRVWsgArd+92mbA2XTmD0NkZyL6eibofSFZy/kqcoUHuMMoT7lMYE1H7wWTkzKjFD9/d1FUeRzHKXzkKzVIg709E7gdlD21ojp3pYSjK6heUqdvWFp6admZ6Vp3uuwlvTMD7tbCG9E9FyWNUSWRZOSes0rPpKE1vgDuFtfOZ/XhkTC7GzavE5PFleGj/kxbCGjb/aQSOqsbQnS9ifPkBTB9SjPFTqzG8eQvmTMpA44857cJK+3wroiaV4/D7T7pMWOuffgxhwRnIas1E+WcUVVmfYdSow6ipfOlaTED9lxORxo7vu6873xdLnuPKGewJyxm5kFQceZpIkHzcsd+uYlXQXpiA91th/Wp0HKYOT0Xdp2Ogl5Vzwio6ko7q4vlwp7DOfv8EZgxMx4gduzGyfDWGrjmIUceutAtrbPo+TApdg6F7rmL06jMYtmgfBm48hOGNGxCXRaLoEFb8kgWoqVgNVz4lbDl7EuERJKwM5L+ZgaY2Wx1GSVhG+avJoPJu+PpRJD9agm+60HnUncLi2JqtgaIqGkZjq8e6NWg7d+y3s8jHINJrRJiu/LoTvxXWb0bFIWJOHJpuy08HnRdWwc50NNQ1w53CoullYqcWYuSyjRi8/QAGbT6KkYKwpkxfhrGlRzBsnyl/FXDiEoZsP4aROUuRvCgaVTfSUPFlFTJfZsqYUIYjH1J05TphrT51HBGxJKx01ixMQd1NkpWYv+IJdzl/ZeowyhPu8/EIGr55BEmPFuGbrzovLE9CSW8+QJn+1ebJcoFQ3LVfZ5CHDenwsgS83wrrP4cnIjmH8iiyqJwXVm5LBpqXLIW7hZWfVoeAihWasIZsP6ENbNYGP296AYEjqk35K0q4s8+pw2jAqfMYHlOLyGVzmEhikPFCAULDcrHmwB6XdxxdefQIIpNIWGmMFJR9QlGVnL8iYfH8FZWhZYdRyl9pwvr6ESRPKHHp8BxF53BkyhtvGmfot8L625BkZC4g+ciicl5YWYszsHzdCrhbWJWVzRidu1gT1vD9Z9pzWCOXnEfgSFP+qr3D6BnqMHoRAbENiGmZi8xrMYjOzkRJ9hKcaXN9T/dl+w8iKo2ElcpIRt5rSWj8mZqDYodRnnCXO4zy/BUJazzqP3sUqY+UKWF5AdaapjJ3BETp6lh34LfC6jMwBbnrqbLIonJeWOm1GVi7aw3cLazq6iUYnUPCOoiAx55pF9bYokOYNawcQ3e/iBGHTAOeqcPouKcvYXzmUsSvDUVcUzyywxpw5seLcMdYwiW79iEmhwuLSbw1HhVfkKiMZhi1HPDMO4xSwn0+HkbNWxMQO6wQX3zs2eaPwhK5Q6tNvCQB77fC6jcgFQXbqbLIonJeWKklmdhwuAXuFlZJ9gIElK3A8APHLbo1PJq0BfN652PExmc7Ooyeew4PP3MR48vXIqE6GZFjcnD47SfMsnK9sJo370ZccabWHDQJKw55b1BExfNXPOHOO4zy/FVHh9H/v73zjooyz/L+/v32vBtnd97zvufsu2dmemd2dzrY2mprm7OAgEiQVAVFzrEoQpEzVCGCoGQEQQVEchAJ5qxtwtC20z22ndXWttsR5bu/+zw8UFQVCghFwXI836NtU089oX4f7/3W/d3L3+sNiL9sCvEcGT67dk9jEc1KdxrtN5aC9KHMYcYCa+FCBqz9ZPaqg2pswFL85Asfv2DsyMtFzZkKNFzfjyNPGzHRwDrRfwx+5vGc6b6m+9gwYJmKC+C0KALrMju4Dg3chudj52Fw9iw2FlfD1SICARbJmKiOo+19V1BxqRtZ5TVIVpYhJrIQfpapkJgHwyMhEF65vvCu8kDAKVckPyXvaoQOo8P8K95wJ2BFHTKH/bshON0+uRXcsxpZY4quBFGjvyk24GcssD6klLBsbClhypd2iOl0RnCKDzzFgXBeI4XzuhC4moTA3VwGd4tQuBqHwWlFKHyNY5Eavx17e/ag5W4tAw5Ba/zAav1zO2zXRGNtW6tGpbvZ5kyEeSmwKXgvZ8QTsGjDs8G5MzA81g3r5ZHwM00YN7Danl1EzWfHkVtVixCnbXBaFg5XIzm8nKMQEBUN6bZohORGISQnkt2bCPgGhMHDPgQSgyA4bQlkfx+I+E98oHwhAEtzw7PgX9E9lxXYQbQpBrU5o2usN6uJ12i9K3VNtQE/Y4H17se+kGapNuxTFw8s5QsjxPTYwsvVBy4bguAX4gt5rQeSbrtD8ZRPCflvwejre/oqP4q9JhYp9xMQcyQBgfExcDWNgNQuEbnFBWj7oh4nxgGsxMgdsEjeDcNLpzR6um81SUfSrl2wMM/kDfcB/8rwwhkYXzsFq/B8OMwLQ8cjOurogHW47xPsv9qFVGUpvDcnwtU2GoF5qYi9lYW0pzvYdWYzZeJVE3KUL4OR9GkAA1AAA3kwp6gWFpU+11YwKgBrHXylLhBn52FbYJnGQprV5EvbVpxRi8ocptCAn7HA+v0ybwREk5eiDqohYMVfNIOHjQ9cN7P0scYRaQ9okWl6WOrA4hcu9YSiYQwZUPZlIfZCBvxTk+C0UY6grYnIqyhG271GFnm9HlgNvU0QmyTC9FyP5uZnBizzTWnI7dgDm4/lWNN6jtvwTP6V0UUGrOunYHa5B3YrolHSVPtKYHX2XUT1tS6kbdsNXzN2rpYx8M1TIOJuHuJeFrErykcqdkGJHHZVWUzbMHxCjtBhlOqvhheMKvs9EHvSA+6WQQhWUnqoXjDKG+7K5+vgutUP4nM1kFpv01hMs5pcqbeuGZeW2GqsN13pb361ylnjL2eCfrPSE14ulKKog4pX3GlTuG4iY14ExTOKALR7WKMBFi3udOSyOCQPCS8KEHoxF57xKXA2ioJMnIy83QxeXzQxeBG0hgOr7V4bi3ASYFFXN9heZqNaSmhiquSA5W4aBYPCDqwj/+oMA9bl0zC5cRJmd0/AsrMRkhVR2HuyZRiwDv9yDpVn2pHGIik/i2Q4WcfDM287gm4WIfzlHnY1u9nVlDAcFTIs5bMr2smARRHW9oFrUx9Jr77hWSgY5Q13ZZ8ji0yFCvehDc+C4Z76tQEcTOUQP2qFy+akN6p2n9XYpK3DxHg1VQb839Cbc61RpzDMmwz97RoP2G/0heJnSv00gaV4uhap39C/+q823ccMLLbwCQCRKEPYsz3wP1cIt5QMOG6Khp9ZPNJTd6KiswodXx9Ceet+eGyKh3VeOcz+fHxEYBna5iCtvACRCZnYHFCC9QP+1aYrp7nX0GstvjoG6+P1EK2LQWpaMbIKKxDhmQl3wzg4SpLgWpQL75t7EPC8isVG+xlyKhl6yhHNgBWHYpbwFXLnn86AlTEILCWGJuQII71G2vCsarirF4wKhvt6lkZvgcg7HWKWMotEyfji1sS0Sp7V60WNANXBM24t3qqx5nQhDlj8CVjpdeOu8WjNIn/EX6GFogksbab7RAMrHBUcHAJRw+KQOng+OQjn7jI4pO+AyCYR9mFZsLndDstvjg4Dlrrpvs6DHS95G7bXlcLSLB0bTp6D4XmWDl49BdPbJ7Hli+Ow/PoorB/2wPZxJ0R15XDYVwKnLw7Crb+F4aSRXUUd/HGAJXHVkGEfd26RDFgxKOX2HyahgEsHFew6hvwrBUY3IUe9YHRk/yow0RHiyhIeWKGZONV6SWNhzWri5Rz3+or2sWoqeDEELEH01eUMibbm0jeFxQQhdVhNDbC8GDjc0cLikHb2Dodh/6wLNj/2vBZYq0L2I8AvkQOWuVkqF4EJ/pXppydg/pdjsPqWAYsdy+6XLoj7Oxk6DsEFbez9mtn7NrA4qI5dxQGGmSqGm70DwCpTARbvXymg7l8RsAT/SjDcBf/qdR1GVf0rA5YuroeLmR8c7tTzwMrNR0n66DYiz2r8mgxYcZqCfYaawBrQTEgT31/sC0+t7ZGnF7CWxzbA3S4KqaX5MLHPwEbyr9jPmfSewubPGLDuMWB9dwQ2j3u4Y9KxeWC1sitoZkhpYO9/kDsPAlYoA1YEyL8q0+JfCcCiX4Lhrj4hR7t/NbxgVHXDM93jjUi6bQyxWSwc+g7xwGoqx9IFAdzwU/VFNqs31w8PH09sGqhFum70NyKwOFGaqGftJcaiBR/5wXFxIFK+JDBNX2AtTWavMQtDYv5OGEmUXMHoJjLcyb+6exwW949h6w8MWE+6Yf+cBxa9hysHrCYGrHr2/rXceUgH/as9g/4VD6w8NcOd/Cu6PlX/Sn1CDvlX6h0aBP9K1XDnC0ZDC+0gVuRw50fAEl+owfp5/JTm4B37XjuZeVajF3VhmCiD/XXSpQH/amAJmqZp4pL5/rB/JwThldq26EwfYC1LaIaLlRyZB0tgaBAJg/NnsIn8q1snsYW9zvKro9j68Ahsn3ZD9KKTxTkd7OzbGUZU/atazr/iDfeKAcO9dMBwLxgw3NX9KzLcVSfkELAE/4ruiap/JRSMCv4VGe6Cf8WA1b8eHs7ecLhyYAhYXzVh8wfSwedF8wUv3hy5ffGsXi+KqtSn9Ey6dLjPcHTAGtB0SxNXfRjIAcvdzlNLWjh9gLVaVgV/30SUXq6FOYsaDdo7B/0rznBnr7d+xPtXopfkXxGwBP+qUcW/UjXcVf0rwXCndJCARf6VquEu+Fej7TCqvuHZACn3jeDoEAPH54eGgPWkDVaLw7hRbKrPjabfTObE5pkqXUZV6tKVAT8mYHGaRmnixrlBHLDE84KReJO+pZqewDKy3oGU4jyU9dYhJCIdhqE5MCb/6o5guB/hjmP3jAz3If9qyHA/qGK47xv0r2I4/0qb4a7qX6kWjAqGu/qG51d3GCX/KqzcFuKCfC76GwTWiw7YrpJzk7nVnx1FW9QZdBZcrxeBasQ2x7qSjgz4sQNL0DRIE03mBHPAEn0QAmkmgWj6AWtddic8LZJRcqGaA1bRhRpYrpZi0/4DXMGo+ZcMWN8P+Fd/7YJDv7p/NWS4k381ZLirFoyO5F+9ynDX5l8RsNT9KyMo+wzgbuvD0sGa4cBi52pvHIt/WaUJLEGz4BpZegEqFenCgB8/sFRPUg/BRT3dzd/ngUWdAZw3+Kn1d9dvYK3rOAvjiH1wWJeI2gstqP68hQMWaVttKWyNQmHqmQ6L8kpYX26B7U/dEPV1suOq+ldN7Ozr1fyrkQpGyb9SBZZQMKrqX421YJT3ryIbrOEgSYTjX9t4YD1phSgiEyKTONgvj8T/W+Gl8fzUReCaTRV56RuoVPWr1ZO7c+aNgcVJD9PEv2fAsnxPygNrQF4erkj9XoCWngDr/mFY79+HrRm7YRVZCCuPHFgbJsNxfjgS5Tlo+wtt5zmNrp+PofxG/SC0ii7WIrk4H96ucRCvlsFisRTWXikQM5g5PWpUM9z5gtEQlg4SsISCUQKWZsHoWP0r1YLR4R1G0x6ZIijFCWKjKEg+P8hgdQiOLw5B5JI67Ln8/+WvB5aqCFw0hEJ9Ic9kkZm+vbJxzD2sdK5JNuAnBliCqFxfT6Ktf1ztAet3hwOL5LA4CCG5tiza2oCIGhu4GPvBYVEwtwE6MNUDSZ+RFzPJwHrWAnF9Gey9FZB8FIH4sCxszypCXkU5ytuq0XS7DSdenmSgOsXBitcZtPzQNQis3b31KmpAwblaJJUUwtstHlbLgmAliYbDnhy4XytDQP+Qf6VpuKv6VwKwRioYFYAl+FfaC0YTb9ogWOkCh5Xsfqdkw+nHJvYT7RywHNr2aDyT3y7z1nh+o9FHbgnY3XpcY3HPJNH+P20DVvVZv1op0XhWE6WJBdaA9CFN/PUqD9hqAdag3guB0ccp+JOoDW97HMGfJC1YalIIy/ly+MkofaRUZ+KA5X2nEi4VeXDwToXj0gjEhWSivHUfjr+gTdB8x1FeJ0Co4n8NB9YJpubvu7hISx1YpZwaUcKUf/4gUiqK4eefDNEGGTYv9oW1uxxOO1Lg25mF0M8LEPOSN9yHb3gWDHfBvyJgqfpXqoY7XzCqeOaCxF5XRBxwg3+kFxyXBUO8JRaOeTvh/EM9920lRZQCsEQeaRrPgjprqD+/sYjSRZr6PJPSRX1O+16rSWz0NynA4jTFaSIZuXbvDAeWaDBFlMJkThjedjiM33kcxe+8j+Jt3yP4o+wk3ok6hzXOtXBYz6By2gdpD33ZogyAsn9kYFF7mZQfdyDufg4ir+5ASHsW/Cq2wTNTARfPRHiYxELumQ6lcif2dlfhyFNqOaPZInk0wDqBszj05Cgq77SMCCxeTSjm1Iydp1j0VVYMWVwmfP2S4WQRCfuNMthvlcHRNRTu8kj4ZkQjaFcsQkpiEVoei/DKaITvi2K/yxFeEY7Q0lDICqQI3h6MgKggeLsHw9MiHL7myQgP3ImEVBa11VfD7WEdS0ebWaLYwmIvFk0eq4DkaAUPrO8aYb84QgNYb78hsFRF6eJ0reUS0r5pCyoVTVajv8kD1oDeot45UxBtEbAITKoLI0jhBjdzf1j/VyDmb8zHb90ZrLx4WP1H2Fm8l3obczJu44OsW1gcfwq2C6LgtCwUboZhcDEKhYupDK4W7L+twuBmGcbSyHD29xHs/0fAZXUERHNkg+/lskSODMVOtHxWj6PPqJnfyP2wxgos0tGXZ9D0fTcqPm16LbAEFQ2qBQXXGcjO1iOzqwapByoQV8yiwux8hKbmICQuC9LoLARHZiEsLgcxGUVQFO/FjgP1KOhqR9knR1H95TnUP7mCpv4bDE830YRbDN/HuVKKQWA9boRoCbsv88MgedgMx8Oa6eBEA0vQ+kDltEkXCVTTLe17rSap0d+kA0vQW8vEkxYmahMPrOELI7xCAuULS1iv9MQf7RrwO8+j+L3PEfwh5BTeS2GwUjJYbb+FeTk38eGuG1gV3g7XDbFouLEPh785gLZ7NWi5W43m20x3atD2xUF0fF2Hjm/qEemTDivnHTAtrodpWT3Mk8pga5KEcLc0tN+n/u8TC6zjOMfpyAuWJj48gr13W7H7xuiBVTiggt5WTvm9bSi40Y7C2x3Y/Xk39n97AnU/XUDLi6vcEIo29KJ1QC24MaCbHKxIjUyh6BgOLPbTjmUFcMjLg6SvDeLIbRrPhPSmKeGrROmivoJrRoJKVZNgwOsMWJx0mCZqBdZeMoctYGPsjH/fuh+/9z6Cf/fvwTtx1/C+4lN8kHkbc3fcYrC6iQUFN7CwpBcbvasQ4Z7MoqQGjDQ1Z097OawctsPw1GkYXqJtM/zGZNPe47BS7obP5gR0/Uj93iceWMc4nWdHOY+u5wxejyj6OYw9d9pQerMFJTc0gVV8owXFt9j///QQ9nzRjapvjqH20Wk0/3IR7S+vaJ2a8zpgVbGf9WZ/UgfWoIf1A4u21kZpPBPSb5dPHrAE6RO4yEgfzQDTmaCJ3meoW2ANSBdbfNSBJXo/BPEX6Wt3C7gl2uP9lSl4268Hf5Qew3tptzBnG4NVNoPVzpuYn89gVdyLj3Zfx8dlV2BmmYPsXbnQBiwaPhHhngqT4gYYXuSb6tG2GZNbJ7lOCls+Pw5rZTFSktjr+ycXWOpDKLpensfhvvPoeH4Oh/56Du1/PY9Dz5n6LqLj5ScjTs0ZD7By2blRoapWYLF75BCbpQEqQf86xrKGN9FUgut/EqgGRQa8lucwXk0JsARxaaKWk5oI/ZqANScYojlSBispwnZTcSPVB1kg8po5lv3JEX9wb8Z/hB/HnIxbmJvFYJU7AKsiBqvS61hccQ0f77uK5bvPwtYgBY039kMdWD0/NcGFpY0GXT1cBwUOVjdPcttmzBisqBLd4oseiMyTUHvpIHQJLPWe7iNNzZkIYEWyo40ELMfD5bB/b8jfU9f/XTlypftkSZfgmvGp32s0kQb8lAKL0ySlib9e7QFXex+k3LOA4hequibxwIr/wQxW3paYY6jEf4YfZangTc63mp93AwsKeVgtKudhtbT6CpYdvIz12w/Bb3Mceh7XQxVY5F+JjRKwoeswN8GGYEWbkqlynfpUWXx1lO9VVb4HMYEZmInAqmGvoXRQK7BetEK8JU4DUoLsmF61NWey9Z+2YbjYe0cDMhOh/+mgGtQE7jOcemANaKLTxH9gwJJY+kDRRy1OSEPASnhghoDTJli3xAnvetYwYF3jfSsGq4UlA7CqvIolVVexrPYKljdc5gaYmvqUQO6VgmPPhSiLAevrejhsSsSa5gaWDh6H6e0T3B6/LX/h+6xbfnsUWx8c4SraJeticPg7Grg6s4CVzc6Tquq1AcvpRvUroysq7v2n1cO7NehUq125zx+lapSyqUNnvDrYdWrKOifoo7j1rX7vxyG9AZagiUoTqWWJnYEvkh/StpvhwEp6vAXSXmO45lpi1ZIgfBjTPWiyf1TGUsHKa1iyn8HqAINV/WWsaP6EG2C6+tB5mLvtQpRvGroeUKTViu7HTXA1jsfaAzVY29PEUsHjXMsXSgVpjyA11qPWxdSryj4iG4VVZZhJwGpkv4eynxoJWJLaYg1IqcqSpevq7WV0qgFgkSgSoohIHT5jEUFvJtRRTYYmwoDXO2BxmqA00XK5PyJuGSGjfziwFC8sEXLTmIOWs8IaxssisSTzLA8r8q0YrJbWMFjVMVg1DcCq4yLWdl/gRmxtjt4Db6NYVJ/ei+Ms5Ql1SsaG3BIGtBpsONnAgHWEh9X3R7g+VbQx2e5ZF+yPViHMJW1GAauYvS91hBgJWI4l+RqQUpXpnCCN56ZTsUWk/vmjyGisaaKQ/qkfa1YqmoAyB/0E1oDeNE00XhSAwBOGSP6JoqwhYNF+t6gvN3PAkvaawDndBluWy7E86yTvWzFYLSNYNX6Cla0UWV3kxsOvO3qem1hDPdVNKptha5yEYJsE+JvFwjBIiTWHqxnUqtjPVMP001aWEh6G9eMu2P3MYNXXCfFP7ZCsjELPEyoknRnAYkku13NrJGBJqos0IKWqdfMCNZ6bTqUFWIJGmyZOZeO86aY3bfSn18DitMhy3Gni2oX+8G83RvjdjVC8HA6s9D4ryG6ZcMCS9prCu0QEm6XhWB/XzJnsyxsYrFouYRXBqvMC1h45z80DpInL1KKY2sAYXz4Bs/pmWGRVwLR8LwzONcLgTB37vRabrhzE5ruNsHncyfWpEr/kW7+I47KQmpgzI4BVw17nw0D1KmA5XdinASlVLVngr/HcdKpXAItEICpt6NSAlBBV6bwd8XTXGxrw+g8sQVyaOLZd4LQYfPZTJLUOMV9Tq94hYFErmeSfLCG7bcoBK6LXFlktSkjWS7HZJger953GqvZLLGpisOq5gPUsFdxAsDp3dnhx6O2TDEx8q2Lz+wMmOw2EEHwrBivqs04N66gXlORpC8QW8WwRVE57YCnZO1I6+CpgOT9rgf0Szf2Dgj5Y7Kvx3HSq1wBLUKCyCD88+nE2qpoAvUmjv+kDrAGNJU2ct8gX7pmWHLCkNzYg/gGlhkPAona+6X02LD00h+yGOYp7M1F2PQ/xOcmwWxIMk6DdWN90kvOtNpyiacsDsKKJy9pgpWqyk2+lBiuq+Ka6JNenjZDYJSKnqATHX46tW4O+AKuKvdaPgeq1wGKvdMzK1QCVoMncljMakVeq/hkbSQQoShFno6o313gN+GkHLE6UJo4iF/7Tx75wktnxwOrdgJAbBkh6TKnhELD4Hk72SH5ii6JPFSjvzeNUfHYnAn2jsHWVHKaxe2DYdZyvZBeKQwcq2YXiUJq8TK2KOZP9STc/EIJ8KyGyEmDFFjItavevaiARJyJzewGOPSdoTS9gJbFXUzfT0QDL6UEjRCsiNWBl964Uv5nCGizSWIA1qwnUOA346QksQSxN/NWqkVuy/o796y22dxoElrTXgEHLEAkPCVrDgUUN6BpeZqP5uz2ouFnAoJXPVICc9iz4e0TCenUktigqYXyRb2XMVbILxaEEq++OcKPiqbc6Z7I/7+QmMJNvRUMhaOEKgyFoYdMi93pQDYlXMhIjd+D4CyHK0n9gVbDj+jFYjRpY7CiOnXtgPyd0GLCoI+yUljSsnQXWVGo8lQDTG1gDGilN/D8rPWG9zgNBlwhWPLCkvYZMRoi+vxmKlwStIWDtRTwDQx2Ovahl4KpA5e0iDlrlvYXI7dgBf5do2C6TwyqxBFuudKsVhzJYPe4e8q04k52fYEMLlhYvtS3mYdUIGm5K02z8fqqGS4wCMQHbcOQplTvoN7Ca2Z8j2Z9odNhYgEURpkNNCUTL5RysRKuisGlusMYz07XeWuGg8XmalY40DgN+RgCLE5nyamki/ett/KEP/LsJUsOBRSUNshsmiL1rg4TrjojuckFsTSByi3KQmZ2FDGUWlGmZSEpUIiY+FbGKFKSWKLG9LhsxiamQbIiCTVgutl5u0zTZXwqp4BCsaAHTgqaFzcOqjpvGHIAart+6V3k2PNZF4+AnTXoNrEx2ZALteIDF9XTvOwTxA75FtHieFO9MselO+9w0Pkuz0pnGus9w5gBLEKWJKtHWinl+8Cilbwp5YAWe2QS3XAvYOYthv9YbTgaBcLcNgm9QIIJSAhGyMwihpcEIrwhB+L4wrtumrFCO4Aw5fILlcDKRwWGFDD52kfAyi4Tj6ijYZhTA9qsOrjiUM9n71Uz2Ad+Kh1UDNxiCh9UBBDJYUb91GhARcDofkjVyFFZVDsRZ+gWsKna8QHbubwQs8GO+RLFZCKsIgO1CKf55Cn2sWWBNvbRlRyNp5gFrQEKa+P4iH0hCbRB8fQNcs81hvkYCiY8EEU1OSPlSAmUf9ciiyS9C/3aaCEODFqh/ObVEpn7m1Nec5vMlI6M/DWnfpUN+MAmezlGQLA6HmPbKmSfA/spBDlaqvtUQrHjfihY5zQmkSTYCrKQMVjQvkEbIh35dAleHWChS89H9mEoe9ANYjezvo9m1EGjfGFjPD0FkFYeku/4IKw/E2nkBGh9MXWkWWHqgMRjwMxZYnFi09a+LnWFt5AxRgDWsLcWQX7SAsp9GUVFvLBpNNUZgcX3caW7fdm5wQ8KfsxCUlQTHFeGwnyPjpxv3t6v4VkMmOy1wzrdii54GUwRxsNoPGQerSm7AKc0MlD8shldsMgK3JqPxJm2WnlpgNbPfU9nfEGQnBFh36+FiHgrFMz8oX/jDbasUf1zqo/Hh1IXeWibS/NzMSucabZnDzAYW098vtILZO35wCrJH0re0p5DqsMhsnxhg0bQcGpOV8HAnAgvT4Lg2AmLnFDj/uXaYyc7DarhvxcOKnxUowIomMkejFLH9xZC1b4eHTSyyc0txrO/UlACrlSn9ZQf8vt8Hnzt74HW5DJ5nd8PjNNPZMnhcr4THvSp4PqsfNbDEFcUISBDmGwYgoTcIlh9J8Q9aRtZPtqiIUf0zM6spEFk5ozDgZzywPpjrAm8vTyhf0hRiKmeYHGDRuCyaohz7SyH8ctMhNoqGc1spPPupuHI4rCgVJFiRbxXKYEXjwHhYlfGwQgk3M5BGhsU/2AXfyHgEWiah7mr7pAGr/fklVN08il0NDUjP2YMYeT6CREq4rIqGeKEMzuuD4WYVDE+nIHh7BjIFwNM1EO72AXAxDoLDYinEK+VwcEqGY3o2nHvK4fKoQRNY/R0QSZIRe5JGp5FobFgQpNlSzF3kp/EBnWzNAkt/NBoDfkYD618W2EC0NACp31OFu26ARdOUYxhwQq/ugrN1DCQRCnh/X63hW/Gw2svBiqIrmmNIsKLX0jEIVjSVORl57Pg7IW9XwHldBNKSC9D144k3AlYnU91fTiB3Xw3iovPhszkJDotoGpAU/lFSyPKDENkchITrAUh75IeMfrovNIeQRtPTfaKZjXTPaIgqdXKle+iI9IeOiDvrjLAyd/aPhC8cV4dA7JvOdRylIRTcINX7DXAyZOngz3SfeVhlsDuS/iQENiuD8Rsddx+dBZYeaRSTdmY0sBbMdUNoMU0kNoSugRXNUruIn0rhpVTAcUsMS6cqhvlWgsnOw6qc+/khWBWxYwmw2sW9B01mTn+chaDUOPiYxmN38wEc7TszamAd/uU8SruaER+dB5clkXA2lCEwSQb5QRmS7oawCJTmLtJ1E0Qo8qFhqb7g74kqrNwxBCuajs3Dip+WTfeaatro3towKNkiqlUCLzcfiDZEwaGhDOLiAgTEBWMouqI/03uHIGSnDEsXBOB/a/mgTpbe+thG43MzqykUjQXU8pwEzVhg/d1CS1itokGoBKupARaBiCIo/2N5cNwcA+/mXVpNdvKtaHR8LHstpYI8rPKRwo5LU5n5MfLCZObtSLiaBl9pFEvZUlBQvR9dT09pBdahH0+hpK0eMbIceJhHwE8eioiacKT/SNdFk5xDB66TgEHgEGBF90CAFY2kHw2s6F4KsKJiXLrH9OUGbYOyQNJtG/hHeEA8P4RFYAIY+eiKPwcZO68wOJmF4N90OJRiFlj6p1cZ8DMWWL+fL4a/nBbVBkw1sMinCrxXBkfTaHhkESa0mOwDsOJTweGwGhojv50pE/w4eSUSb6fALzySKzhVZpag4U4XB6uGz3qQmlIED8No+AaEIfaMHIpf6DrkTBEYgpUMQ7CiaxZgRdGVACuKrgRYUSoowIpSQVVYUXSlHVZ8l4wtoM6vcRet4WrmjyBlMJQvhOiKzoPOJxxRh8Jg8GEQ/lZHW3ZmgaWHWrxV4zkJmrHA+niOO0t3aNHoB7Aosgp8vBcScTw8YlMh7x9usqv6VikDvhUdm4dVNvd+PKy2Dby/gimdKRUp95Igy4mF2+ooxLJoys04nKVXcqTcj2b/nxSFIVjRNWmDFUU8AqwouhJgRdGVACu6TwKs6L6pwoqiK4IV7c8UYGUJ/n4TrOjemzKZsKjXDL7B7ghIYPe4n4+ueIhGQPFcDg8HGf6wVDddHGaBpZ9S37UiaEYC662FFjCZ64ekzzZBn4BFpQwBz6ogcU2ET64C0f2qvlWhVt+KhxVFVwKs6NcQrDIY3lK+ZsBKToCHsRwhu+RIfxw7cM4CrOgaBFgRGAgQdH2qsHqVb6XdZB8OK9634u+tNlhRSYnw5ccmFvFtgrenJ4KVdB58dMWfYyRiT0Zg03zdtE7+X4usND4/s9IDjbDPcEYC6x8XWkO0yg+Kn9dD74CFGvg9OwBHcQL8ixSI6St6hW8lwIqiKwFW9N4EqzQo+1MRXhkDdxsWUe2IROq3BKo4JvpdFVYUXWnzrVRhNR7fShVWqqmgACtKBQVY8dEVwSoDRqBnkv7UCG5WPoioE4BF5xkJZV80vDzDdOJlzQJLf6Wt0d9/A9kSXf/2YQKrAAAAAElFTkSuQmCC" alt="Логотип">
+        </div>
+    </div>
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <table class="rtable ">
+            <tbody>
+                <tr>
+                            <th class="left" style="width:100%;"><a style="color: black" href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037">Песочница - C#</a></th>
+                </tr>
+                    <tr>
+                                <td class="left " colspan="1"><span class="contest-state-phase">Соревнование идет</span></td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark" colspan="1"><span class="contest-state-regular countdown before-contest-380037-finish" home="/static" noredirection="true" textbeforeredirect="Соревнование &quot;Песочница - C#&quot; завершено, обновите страницу для просмотра последних изменений" cdid="i2">01:18:56</span></td>
+                    </tr>
+                    <tr>
+                                <td class="left bottom" colspan="1"><span class="contest-state-regular">Участник</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">→ Языки
+            <div class="top-links">
+            </div>
+        </div>
+<div style="margin:1em;">
+    <div style="font-size:0.8em;">Только перечисленные языки могут быть использованы для решения задач соревнования</div><div style="font-weight:bold;margin:0.5em 0;font-size:0.8em;text-align:center;">Песочница - C#:</div>
+<ul class="list" style="font-size:0.8em;margin-top:0.5em;">
+        <li>C# 10, .NET SDK 6.0</li>
+</ul>
+</div>
+    </div>
+
+
+<style>
+    .submit-form.output-only select[name='programTypeId'],
+    .submitForm.output-only select[name='programTypeId'],
+    .submit-form.output-only .programSourceTr {
+        display: none !important;
+    }
+
+    .submit-form.output-only .programTypeNotice,
+    .submitForm.output-only .programTypeNotice {
+        display: none !important;
+    }
+
+    .outputOnlyProgramTypeIdNotice {
+        display: none;
+        font-size: 1.1rem !important;
+    }
+
+    .submit-form.output-only .outputOnlyProgramTypeIdNotice,
+    .submitForm.output-only .outputOnlyProgramTypeIdNotice {
+        display: block !important;
+    }
+</style>
+
+            <style type="text/css">
+                .submitForm .field {
+                    font-size: 1.1rem;
+                    width: 3em !important;
+                    padding-right: 1em;
+                }
+
+                .submitForm input, .submitForm select {
+                    font-size: 1.1rem;
+                    width: 17em;
+                }
+            </style>
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">→ Отослать?
+            <div class="top-links">
+            </div>
+        </div>
+                <div>
+                    <form method="post" action="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem/F?csrf_token=2be9df09fa0197ec7fe717fe765ea72a" enctype="multipart/form-data" class="submitForm"><input type="hidden" name="csrf_token" value="2be9df09fa0197ec7fe717fe765ea72a">
+                        <input type="hidden" name="ftaa" value="">
+                        <input type="hidden" name="bfaa" value="">
+                        <input type="hidden" name="action" value="submitSolutionFormSubmitted">
+                        <input type="hidden" name="submittedProblemIndex" value="F">
+                        <input type="hidden" name="source" value="">
+
+                        <table class="table-form" style="width:90%;">
+                            <tbody><tr>
+                                <td class="field">Язык:</td>
+                                <td>
+                                    <select name="programTypeId">
+                                            <option value="79" selected="selected">C# 10, .NET SDK 6.0</option>
+                                    </select>
+                                    <div class="outputOnlyProgramTypeIdNotice">ZIP</div>
+                                </td>
+                            </tr>
+                            <tr style="padding: 0; margin: 0; height: 0.5rem;line-height: 1rem;">
+                                <td style="padding: 0; margin: 0; height: 0.5rem;"></td>
+                                <td style="padding: 0; margin: 0; height: 0.5rem;">
+                                    <span class="programTypeNotice notice small" style="position: relative; bottom:7px;"></span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="field">Выберите файл:</td>
+                                <td>
+                                    <input name="sourceFile" type="file" value="">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <div style="text-align: center;">
+
+
+
+                                        <div style="position: relative; display: inline-block;">
+                                            <input style="width:10em;" class="submit" type="submit" value="Отослать">
+                                            <img class="ajax-loading-gif" style="display:none; position: absolute; right:-24px; bottom:0;" src="./Задача - F - Codeforces_files/ajax-loading-24x24.gif">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    <input type="hidden" name="_tta" value="766"></form>
+                </div>
+    </div>
+
+        <script type="text/javascript">
+            $(function() {
+                window._ftaa = "1s8majff9y3ee5kvro";
+            })
+        </script>
+
+        <script type="text/javascript">
+            $(function() {
+                window._bfaa = "1f84dfbab7ebaf7529dcce48521106ef";
+            });
+        </script>
+
+    <script>
+        $(function () {
+            function adjustNotice(programTypeId) {
+                var $programTypeNotice = $(".programTypeNotice");
+                $programTypeNotice.text("");
+            }
+
+            adjustNotice(79);
+
+            const $submittedProblemIndex = $("select[name='submittedProblemIndex']");
+
+            function adjustSubmittedProblemIndex() {
+                const index = $submittedProblemIndex.val();
+                const outputOnlyIndices = [];
+                const outputOnly = outputOnlyIndices.indexOf(index) >= 0;
+                if (outputOnly) {
+                    $submittedProblemIndex.closest(".submit-form").addClass("output-only");
+                } else {
+                    $submittedProblemIndex.closest(".submit-form").removeClass("output-only");
+                }
+            }
+
+
+            $submittedProblemIndex.change(function () {
+                adjustSubmittedProblemIndex();
+            });
+
+            adjustSubmittedProblemIndex();
+
+            $("select[name='programTypeId']").change(function () {
+                adjustNotice(parseInt($(this).val()));
+            });
+
+            $(".submit-form, .submitForm").submitOnce(function () {
+                var form = $(this);
+                var $ftaa = form.find("input[name='ftaa']");
+                var $bfaa = form.find("input[name='bfaa']");
+
+                if (window._ftaa && window._bfaa) {
+                    $ftaa.val(window._ftaa);
+                    $bfaa.val(window._bfaa);
+                }
+
+                if (form.attr("enctype") === "multipart/form-data") {
+                    var sourceFiles = form.find(".table-form input[name=sourceFile]");
+
+                    if (sourceFiles.length === 1 && sourceFiles[0].files && sourceFiles[0].files.length === 0) {
+                        form.removeAttr("enctype");
+                    }
+                }
+
+                return true;
+            });
+        });
+    </script>
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">→ Последние посылки
+            <div class="top-links">
+            </div>
+        </div>
+        <table class="rtable smaller">
+            <tbody>
+                <tr>
+                            <th class="left " style="width:2.5em;">Посылка</th>
+                            <th class=" " style="width:7em;">Время</th>
+                            <th class=" ">Вердикт</th>
+                </tr>
+                    <tr>
+                                <td class="left  dark "><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/submission/157204389">157204389</a></td>
+                                <td class=" dark ">14.05.2022 15:41</td>
+                                <td class=" dark "><span class="verdict-accepted">Полное решение: <span class="verdict-format-points">25</span> баллов</span></td>
+                    </tr>
+                    <tr>
+                                <td class="left bottom "><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/submission/157204179">157204179</a></td>
+                                <td class="bottom ">14.05.2022 15:38</td>
+                                <td class="bottom ">Частичное решение: <span class="verdict-format-points">0</span> баллов</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">→ Набранные баллы
+            <div class="top-links">
+            </div>
+        </div>
+        <table class="rtable smaller">
+            <tbody>
+                <tr>
+                            <th class="left " style="width:2.5em;"></th>
+                            <th class=" ">Баллы</th>
+                </tr>
+                    <tr>
+                                <td class="left  "><b>A</b></td>
+                                <td class=" ">5</td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark "><b>B</b></td>
+                                <td class=" dark ">10</td>
+                    </tr>
+                    <tr>
+                                <td class="left  "><b>C</b></td>
+                                <td class=" ">15</td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark "><b>D</b></td>
+                                <td class=" dark ">25</td>
+                    </tr>
+                    <tr>
+                                <td class="left  "><b>E1</b></td>
+                                <td class=" ">25</td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark "><b>E2</b></td>
+                                <td class=" dark ">15</td>
+                    </tr>
+                    <tr>
+                                <td class="left  "><b>F</b></td>
+                                <td class=" ">25</td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark "><b>G</b></td>
+                                <td class=" dark ">25</td>
+                    </tr>
+                    <tr>
+                                <td class="left bottom "><b>Всего</b></td>
+                                <td class="bottom "><b>145</b></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+<style type="text/css">
+#new-resource-form tr td {
+padding-top: 0.5em;
+}
+#new-resource-form input:not([type="submit"]) {
+font-size: 0.8em;
+}
+#new-resource-form select {
+font-size: 0.8em;
+}
+.new-resource-error {
+font-size: 0.8em;
+}
+.resource-locale {
+color: #666;
+font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+</style>
+<div class="roundbox sidebox sidebar-menu" style="">
+<div class="roundbox-lt">&nbsp;</div>
+<div class="roundbox-rt">&nbsp;</div>
+<div class="caption titled">→ Материалы соревнования
+<div class="top-links">
+</div>
+</div>
+<ul>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-a-tests.zip">problem-a-tests.zip</a></li>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-a-example-solutions.zip">problem-a-example-solutions.zip</a></li>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-b-tests.zip">problem-b-tests.zip</a></li>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-c-tests.zip">problem-c-tests.zip</a></li>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-d-tests.zip">problem-d-tests.zip</a></li>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-e1-tests.zip">problem-e1-tests.zip</a></li>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-e2-tests.zip">problem-e2-tests.zip</a></li>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-f-tests.zip">problem-f-tests.zip</a></li>
+<li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem-materials/problem-g-tests.zip">problem-g-tests.zip</a></li>
+</ul>
+</div></div>
+                        <div id="pageContent" class="content-with-sidebar">
+                    <div class="second-level-menu">
+<ul class="second-level-menu-list"><li class="backLava" style="position: absolute; display: block; margin: 0px; padding: 0px; left: 0px; top: 0px; width: 66px; height: 20px;"><div class="leftLava"></div><div class="bottomLava"></div><div class="cornerLava"></div></li>
+        <li class="current selectedLava"><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037">Задачи</a></li>
+        <li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/submit">Отослать</a></li>
+        <li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/my">Мои посылки</a></li>
+        <li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/status">Статус</a></li>
+        <li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/standings/groupmates/true">Положение</a></li>
+        <li><a href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/customtest">Запуск</a></li>
+</ul>
+</div>
+
+    <style>
+        #facebox .content:has(.diff-popup) {
+            width: 90vw;
+            max-width: 120rem !important;
+        }
+
+        .diff-popup {
+            width: 90vw;
+            max-width: 120rem !important;
+            display: none;
+            overflow: auto;
+        }
+
+        .input-output-copier {
+            font-size: 1.2rem;
+            float: right;
+            color: #888 !important;
+            cursor: pointer;
+            border: 1px solid rgb(185, 185, 185);
+            padding: 3px;
+            margin: 1px;
+            line-height: 1.1rem;
+            text-transform: none;
+        }
+
+        .input-output-copier:hover {
+            background-color: #def;
+        }
+
+        .test-explanation textarea {
+            width: 100%;
+            height: 1.5em;
+        }
+
+        .pending-submission-message {
+            color: darkorange !important;
+        }
+    </style>
+    <script>
+        const OPENING_SPACE = String.fromCharCode(1001);
+        const CLOSING_SPACE = String.fromCharCode(1002);
+
+        const nodeToText = function (node, pre) {
+            let result = [];
+
+            if (node.tagName === "SCRIPT" || node.tagName === "math"
+                || (node.classList && node.classList.contains("input-output-copier")))
+                return [];
+
+            if (node.tagName === "NOBR") {
+                result.push(OPENING_SPACE);
+            }
+
+            if (node.nodeType === Node.TEXT_NODE) {
+                let s = node.textContent;
+                if (!pre) {
+                    s = s.replace(/\s+/g, " ");
+                }
+                if (s.length > 0) {
+                    result.push(s);
+                }
+            }
+
+            if (pre && node.tagName === "BR") {
+                result.push("\n");
+            }
+
+            node.childNodes.forEach(function (child) {
+                result.push(nodeToText(child, node.tagName === "PRE").join(""));
+            });
+
+            if (node.tagName === "DIV"
+                || node.tagName === "P"
+                || node.tagName === "PRE"
+                || node.tagName === "UL"
+                || node.tagName === "LI"
+            ) {
+                result.push("\n");
+            }
+
+            if (node.tagName === "NOBR") {
+                result.push(CLOSING_SPACE);
+            }
+
+            return result;
+        }
+
+        const isSpecial = function (c) {
+            return c === ',' || c === '.' || c === ';' || c === ')' || c === ' ';
+        }
+
+        const convertStatementToText = function(statmentNode) {
+            const text = nodeToText(statmentNode, false).join("").replace(/ +/g, " ").replace(/\n\n+/g, "\n\n");
+            let result = [];
+            for (let i = 0; i < text.length; i++) {
+                const c = text.charAt(i);
+                if (c === OPENING_SPACE) {
+                    if (!((i > 0 && text.charAt(i - 1) === '(') || (result.length > 0 && result[result.length - 1] === ' '))) {
+                        result.push('+');
+                    }
+                } else if (c === CLOSING_SPACE) {
+                    if (!(i + 1 < text.length && isSpecial(text.charAt(i + 1)))) {
+                        result.push('-');
+                    }
+                } else {
+                    result.push(c);
+                }
+            }
+            return result.join("").split("\n").map(value => value.trim()).join("\n");
+        };
+    </script>
+    <div class="diff-popup">
+    </div>
+
+<div class="problemindexholder" problemindex="F" data-uuid="ps_161ce64e3077a5169edd0c2ffd6bbd90dd5c3d7c">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>Условие задачи было недавно изменено. <a class="view-changes" href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem/F#">Просмотреть изменения.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">F. Двумерная игра (25 баллов)</div><div class="time-limit"><div class="property-title">ограничение по времени на тест</div>6 секунд</div><div class="memory-limit"><div class="property-title">ограничение по памяти на тест</div>256 мегабайт</div><div class="input-file"><div class="property-title">ввод</div>стандартный ввод</div><div class="output-file"><div class="property-title">вывод</div>стандартный вывод</div></div><div><p>Вы разрабатываете двумерную игру. Поле представляет собой прямоугольник <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 3.336em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.741em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.551em, 1002.74em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main; padding-left: 0.241em;">×</span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math-italic; padding-left: 0.241em;">m</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>×</mo><mi>m</mi></math></span></span><script type="math/tex" id="MathJax-Element-1">n \times m</script> (<span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-6" style="width: 0.717em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.598em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.61em, 1000.6em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-7"><span class="mi" id="MathJax-Span-8" style="font-family: MathJax_Math-italic;">n</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-2">n</script> строк по <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-9" style="width: 1.074em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.896em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.61em, 1000.9em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-10"><span class="mi" id="MathJax-Span-11" style="font-family: MathJax_Math-italic;">m</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math></span></span><script type="math/tex" id="MathJax-Element-3">m</script> клеток в каждой).</p><p>Каждая клетка поля либо пустая, либо содержит каменный блок <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-12" style="width: 2.741em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.265em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.372em, 1002.21em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-13"><span class="mn" id="MathJax-Span-14" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-15" style="font-family: MathJax_Main; padding-left: 0.241em;">×</span><span class="mn" id="MathJax-Span-16" style="font-family: MathJax_Main; padding-left: 0.241em;">1</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.932em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>×</mo><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-4">1 \times 1</script>. Когда начинается игра все блоки падают максимально вниз. Картинка ниже иллюстрирует этот процесс.</p><center> <img class="tex-graphics" src="./Задача - F - Codeforces_files/c4ef33e987144dccf478ada200ac0885ae03aab4.png" style="max-width: 100.0%;max-height: 100.0%;">   <span class="tex-font-size-small">Пример поля <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-17" style="width: 3.295em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.735em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.194em, 1002.66em, 2.314em, -999.996em); top: -2.097em; left: 0em;"><span class="mrow" id="MathJax-Span-18"><span class="mn" id="MathJax-Span-19" style="font-family: MathJax_Main;">5</span><span class="mo" id="MathJax-Span-20" style="font-family: MathJax_Main; padding-left: 0.214em;">×</span><span class="mn" id="MathJax-Span-21" style="font-family: MathJax_Main; padding-left: 0.214em;">10</span></span><span style="display: inline-block; width: 0px; height: 2.104em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.08em; border-left: 0px solid; width: 0px; height: 1.013em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>5</mn><mo>×</mo><mn>10</mn></math></span></span><script type="math/tex" id="MathJax-Element-5">5 \times 10</script>: слева изображено исходное поле, справа &nbsp;— после падения всех блоков вниз.</span> </center><p>После этого поле затапливает вода, которая под действием силы тяжести стремится покинуть поле. Считайте, что слева и справа от поля находится пустота, а поле расположено на поверхности (то есть нижняя граница поля не пропускает воду). В результате такого потопа на поле могут остаться юниты воды. Вода может оставаться на поле, если она оказывается огорожена блоками (следуйте здравому смыслу и рисунку ниже, чтобы понять правила того, как вода остается на поле).</p><center> <img class="tex-graphics" src="./Задача - F - Codeforces_files/8fa4fd56f3262d014fc5b3b1aed511b6e84037d2.png" style="max-width: 100.0%;max-height: 100.0%;">   <span class="tex-font-size-small">Справа изображено состояние поля после потопа.</span> </center><p>Напишите программу, которая по начальному состоянию поля вернёт его состояние после потопа.</p></div><div class="input-specification"><div class="section-title">Входные данные</div><p>В первой строке записано целое число <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-22" style="width: 0.479em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.36em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.372em, 1000.3em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-23"><span class="mi" id="MathJax-Span-24" style="font-family: MathJax_Math-italic;">t</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.932em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math></span></span><script type="math/tex" id="MathJax-Element-6">t</script> (<span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-25" style="width: 6.074em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.063em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.134em, 1005.06em, 2.503em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-26"><span class="mn" id="MathJax-Span-27" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-28" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="mi" id="MathJax-Span-29" style="font-family: MathJax_Math-italic; padding-left: 0.301em;">t</span><span class="mo" id="MathJax-Span-30" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="msubsup" id="MathJax-Span-31" style="padding-left: 0.301em;"><span style="display: inline-block; position: relative; width: 1.432em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;"><span class="mn" id="MathJax-Span-32" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; top: -4.402em; left: 1.015em;"><span class="mn" id="MathJax-Span-33" style="font-size: 70.7%; font-family: MathJax_Main;">4</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.211em; border-left: 0px solid; width: 0px; height: 1.361em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><msup><mn>10</mn><mn>4</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-7">1 \le t \le 10^4</script>) — количество наборов входных данных в тесте.</p><p>Далее следуют описания наборов.</p><p>Первая строка описания содержит два целых числа <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-34" style="width: 0.717em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.598em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.61em, 1000.6em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-35"><span class="mi" id="MathJax-Span-36" style="font-family: MathJax_Math-italic;">n</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-8">n</script>, <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-9-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-37" style="width: 1.074em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.896em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.61em, 1000.9em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-38"><span class="mi" id="MathJax-Span-39" style="font-family: MathJax_Math-italic;">m</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math></span></span><script type="math/tex" id="MathJax-Element-9">m</script> (<span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-10-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-40" style="width: 6.372em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.301em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.134em, 1005.3em, 2.503em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-41"><span class="mn" id="MathJax-Span-42" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-43" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="mi" id="MathJax-Span-44" style="font-family: MathJax_Math-italic; padding-left: 0.301em;">n</span><span class="mo" id="MathJax-Span-45" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="msubsup" id="MathJax-Span-46" style="padding-left: 0.301em;"><span style="display: inline-block; position: relative; width: 1.432em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;"><span class="mn" id="MathJax-Span-47" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; top: -4.402em; left: 1.015em;"><span class="mn" id="MathJax-Span-48" style="font-size: 70.7%; font-family: MathJax_Main;">4</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.211em; border-left: 0px solid; width: 0px; height: 1.361em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><msup><mn>10</mn><mn>4</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-10">1 \le n \le 10^4</script>, <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-11-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-49" style="width: 6.729em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.598em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.134em, 1005.6em, 2.503em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-50"><span class="mn" id="MathJax-Span-51" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-52" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="mi" id="MathJax-Span-53" style="font-family: MathJax_Math-italic; padding-left: 0.301em;">m</span><span class="mo" id="MathJax-Span-54" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="msubsup" id="MathJax-Span-55" style="padding-left: 0.301em;"><span style="display: inline-block; position: relative; width: 1.432em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;"><span class="mn" id="MathJax-Span-56" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; top: -4.402em; left: 1.015em;"><span class="mn" id="MathJax-Span-57" style="font-size: 70.7%; font-family: MathJax_Main;">6</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.211em; border-left: 0px solid; width: 0px; height: 1.361em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>≤</mo><mi>m</mi><mo>≤</mo><msup><mn>10</mn><mn>6</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-11">1 \le m \le 10^6</script>) — размеры поля. Гарантируется, что суммарное количество клеток поля не превосходит <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-12-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-58" style="width: 1.729em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.432em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.134em, 1001.43em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-59"><span class="msubsup" id="MathJax-Span-60"><span style="display: inline-block; position: relative; width: 1.432em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;"><span class="mn" id="MathJax-Span-61" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; top: -4.402em; left: 1.015em;"><span class="mn" id="MathJax-Span-62" style="font-size: 70.7%; font-family: MathJax_Main;">6</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 1.218em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>10</mn><mn>6</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-12">10^6</script> (то есть <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-13-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x22C5;&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-63" style="width: 6.074em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.063em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.134em, 1005.06em, 2.503em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-64"><span class="mi" id="MathJax-Span-65" style="font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-66" style="font-family: MathJax_Main; padding-left: 0.241em;">⋅</span><span class="mi" id="MathJax-Span-67" style="font-family: MathJax_Math-italic; padding-left: 0.241em;">m</span><span class="mo" id="MathJax-Span-68" style="font-family: MathJax_Main; padding-left: 0.301em;">≤</span><span class="msubsup" id="MathJax-Span-69" style="padding-left: 0.301em;"><span style="display: inline-block; position: relative; width: 1.432em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;"><span class="mn" id="MathJax-Span-70" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; top: -4.402em; left: 1.015em;"><span class="mn" id="MathJax-Span-71" style="font-size: 70.7%; font-family: MathJax_Main;">6</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.211em; border-left: 0px solid; width: 0px; height: 1.361em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>⋅</mo><mi>m</mi><mo>≤</mo><msup><mn>10</mn><mn>6</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-13">n \cdot m \le 10^6</script>).</p><p>Далее следуют <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-14-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-72" style="width: 0.717em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.598em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.61em, 1000.6em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-73"><span class="mi" id="MathJax-Span-74" style="font-family: MathJax_Math-italic;">n</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-14">n</script> строк по <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-15-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-75" style="width: 1.074em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.896em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.61em, 1000.9em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-76"><span class="mi" id="MathJax-Span-77" style="font-family: MathJax_Math-italic;">m</span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 0.718em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math></span></span><script type="math/tex" id="MathJax-Element-15">m</script> символов в каждой&nbsp;— начальное состояние поля. Каждая строка содержит только символы '<span class="tex-font-style-tt">.</span>' (пустая клетка поля) и '<span class="tex-font-style-tt">*</span>' (каменный блок).</p><p>Гарантируется, что сумма количеств клеток по всем наборам входных данных в тесте не превосходит <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-16-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-78" style="width: 1.729em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.432em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.134em, 1001.43em, 2.384em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-79"><span class="msubsup" id="MathJax-Span-80"><span style="display: inline-block; position: relative; width: 1.432em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.96em, 4.17em, -999.997em); top: -3.985em; left: 0em;"><span class="mn" id="MathJax-Span-81" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; top: -4.402em; left: 1.015em;"><span class="mn" id="MathJax-Span-82" style="font-size: 70.7%; font-family: MathJax_Main;">6</span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.068em; border-left: 0px solid; width: 0px; height: 1.218em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>10</mn><mn>6</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-16">10^6</script>.</p></div><div class="output-specification"><div class="section-title">Выходные данные</div><p>Для каждого набора входных данных выведите финальное состояние поля. Юнит воды надо обозначать символом '<span class="tex-font-style-tt">~</span>' (тильда, ascii-код 126).</p><p>После каждого поля выводите перевод строки.</p></div><div class="sample-tests"><div class="section-title">Пример</div><div class="sample-test"><div class="input"><div class="title">Входные данные<div title="Скопировать" data-clipboard-target="#id00542138392193642" id="id0048347220849274963" class="input-output-copier">Скопировать</div></div><pre id="id00542138392193642">5
+5 10
+*...*.*.*.
+..*.*.****
+*...*..*..
+....*.*.*.
+....*.*..*
+1 1
+.
+1 1
+*
+6 3
+*.*
+*.*
+*.*
+..*
+*.*
+*.*
+1 12
+*....*..*...
+</pre></div><div class="output"><div class="title">Выходные данные<div title="Скопировать" data-clipboard-target="#id0021179804541563607" id="id009118744901135016" class="input-output-copier">Скопировать</div></div><pre id="id0021179804541563607">....*.....
+....*~*...
+....*~*~*.
+*~~~*~****
+*~*~*~****
+
+.
+
+*
+
+..*
+*~*
+*~*
+*~*
+*~*
+*~*
+
+*~~~~*~~*...
+
+</pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.changedTests = new Set();
+        console.log("Initialized window.changedTests.");
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "стандартный ввод")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "стандартный вывод")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+        String.prototype.replaceAll = function (search, replace) {
+            return this.split(search).join(replace);
+        };
+
+        $(".sample-test .title").each(function () {
+            var preId = ("id" + Math.random()).replaceAll(".", "0");
+            var cpyId = ("id" + Math.random()).replaceAll(".", "0");
+
+            $(this).parent().find("pre").attr("id", preId);
+            var $copy = $("<div title='Скопировать' data-clipboard-target='#" + preId + "' id='" + cpyId + "' class='input-output-copier'>Скопировать</div>");
+            $(this).append($copy);
+
+            var clipboard = new Clipboard('#' + cpyId, {
+                text: function (trigger) {
+                    return Codeforces.filterClipboardText(document.querySelector('#' + preId).innerText);
+                }
+            });
+
+            var isInput = $(this).parent().hasClass("input");
+
+            clipboard.on('success', function (e) {
+                if (isInput) {
+                    Codeforces.showMessage("Входные данные были скопированы в буфер обмена");
+                } else {
+                    Codeforces.showMessage("Выходные данные были скопированы в буфер обмена");
+                }
+                e.clearSelection();
+            });
+        });
+
+        $(".test-form-item input").change(function () {
+            addPendingSubmissionMessage($($(this).closest("form")), "Вы изменили ответ, не забудьте его отправить, если вы хотите сохранить изменения");
+            var index = $(this).closest(".problemindexholder").attr("problemindex");
+            var test = "";
+            $(this).closest("form input").each(function () {
+                var test_ = $(this).attr("name");
+                if (test_ && test_.substring(0, 4) === "test") {
+                    test = test_;
+                }
+            });
+            if (index.length > 0 && test.length > 0) {
+                var indexTest = index + "::" + test;
+                window.changedTests.add(indexTest);
+            }
+        });
+
+        $(window).on('beforeunload', function () {
+            if (window.changedTests.size > 0) {
+                return 'Dialog text here';
+            }
+        });
+
+        autosize($('.test-explanation textarea'));
+
+    });
+</script>
+
+                </div>
+        </div>
+            <br style="clear: both;">
+            <div id="footer">
+                <div>Codeforces (c) Copyright 2010-2022 Михаил Мирзаянов</div>
+                <div>Соревнования по программированию 2.0</div>
+                    <div>Время на сервере: 15.05.2022 10:40:43 (j3).</div>
+                    <div>Десктопная версия, переключиться на <a rel="nofollow" class="switchToMobile" href="https://route256.contest.codeforces.com/group/OcTypf5d5d/contest/380037/problem/F?mobile=true">мобильную</a>.</div>
+                <div class="smaller"><a href="https://route256.contest.codeforces.com/privacy">Privacy Policy</a></div>
+
+                    <div style="margin-top: 25px;">
+                        На платформе
+                    </div>
+                    <div style="margin-top: 8px; padding-bottom: 20px;">
+                        <img style="margin-right: 1em; height: 60px;" src="./Задача - F - Codeforces_files/codeforces-logo-190x60.png" alt="Codeforces" title="Codeforces">
+                    </div>
+            </div>
+        <script type="text/javascript">
+            $(function() {
+                $(".switchToMobile").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "true"));
+                    return false;
+                });
+                $(".switchToDesktop").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "false"));
+                    return false;
+                });
+            });
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($(window).width() < 1600) {
+                $('.button-up').css('width', '30px').css('line-height', '30px').css('font-size', '20px');
+            }
+
+            if ($(window).width() >= 1200) {
+                $ (window).scroll (function () {
+                    if ($ (this).scrollTop () > 100) {
+                        $ ('.button-up').fadeIn();
+                    } else {
+                        $ ('.button-up').fadeOut();
+                    }
+                });
+
+                $('.button-up').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+
+                $('.button-up').hover(function () {
+                    $(this).animate({
+                        'opacity':'1'
+                    }).css({'background-color':'#e7ebf0','color':'#6a86a4'});
+                }, function () {
+                    $(this).animate({
+                        'opacity':'0.7'
+                    }).css({'background':'none','color':'#d3dbe4'});;
+                });
+            }
+            Codeforces.focusOnError();
+        });
+    </script>
+    <div class="userListsFacebox" style="display:none;">
+        <div style="padding: 0.5em; width: 600px; max-height: 200px; overflow-y: auto">
+<div class="datatable" style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                Списки пользователей
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="./Задача - F - Codeforces_files/control.png">
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="./Задача - F - Codeforces_files/control-270.png">
+                        <input style="padding:0 0 0 20px;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;">
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+                <thead>
+                <tr>
+                    <th class="top left right">Название</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="no-items visible"><td style="text-align:left;" colspan="32" class="bottom dark left right">Нет данных</td></tr></tbody>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Совпадений: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">Нет данных<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">Нет данных<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+        </div>
+    </div>
+    <script type="application/javascript">
+        $(function() {
+            $(".userListMarker").click(function() {
+                $.post("/data/lists", {action: "findTouched"}, function(json) {
+                    Codeforces.facebox(".userListsFacebox");
+                    var tbody = $("#facebox tbody");
+                    tbody.empty();
+                    for (var i in json) {
+                        tbody.append(
+                            $("<tr></tr>").append(
+                                $("<td></td>").attr("data-readKey", json[i].readKey).text(json[i].name)
+                            )
+                        );
+                    }
+                    Codeforces.updateDatatables();
+                    tbody.find("td").css("cursor", "pointer").click(function() {
+                        document.location = Codeforces.updateUrlParameter(document.location.href, "list", $(this).attr("data-readKey"));
+                    });
+                }, "json");
+            });
+        });
+    </script>
+</div>
+
+
+<div id="datepick-div" style="display: none;"></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif;"></div></div></body></html>
